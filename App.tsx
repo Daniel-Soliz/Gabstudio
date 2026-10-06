@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { ServicesSection } from './components/ServicesSection';
-import { GallerySection } from './components/GallerySection';
-import { HowItWorks } from './components/HowItWorks';
-import { TestimonialsSection } from './components/TestimonialsSection';
-import { AftercareSection } from './components/AftercareSection';
-import { FaqSection } from './components/FaqSection';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
-import { FloatingWhatsapp } from './components/FloatingWhatsapp';
-import { BookingModal } from './components/BookingModal';
-import { AdminModal } from './components/admin/AdminModal';
-import { AppointmentLookupModal } from './components/AppointmentLookupModal';
+import { Navbar } from './Navbar';
+import { Hero } from './Hero';
+import { About } from './About';
+import { ServicesSection } from './ServicesSection';
+import { GallerySection } from './GallerySection';
+import { HowItWorks } from './HowItWorks';
+import { TestimonialsSection } from './TestimonialsSection';
+import { AftercareSection } from './AftercareSection';
+import { FaqSection } from './FaqSection';
+import { ContactSection } from './ContactSection';
+import { Footer } from './Footer';
+import { FloatingWhatsapp } from './FloatingWhatsapp';
+import { BookingModal } from './BookingModal';
+import { AdminModal } from './AdminModal';
+import { AppointmentLookupModal } from './AppointmentLookupModal';
 
 export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
