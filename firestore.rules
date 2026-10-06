@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Função auxiliar para verificar se o usuário é a administradora Gab Santos
+    function isAdmin() {
+      return request.auth != null && 
+        (request.auth.token.email == 'gab@gabstudio.com.br' || request.auth.token.admin == true);
+    }
+
+    // Regras para a coleção de agendamentos
+    match /appointments/{appointmentId} {
+      // Qualquer cliente pode ler o status pelo ID de agendamento ou token
+      allow get: if true;
+      // Somente a administradora lista todos os agendamentos
+      allow list: if isAdmin();
+      
+      // Clientes podem criar novo agendamento com dados válidos
+      allow create: if request.resource.data.clientName is string &&
+                       request.resource.data.clientPhone is string &&
+                       request.resource.data.date is string &&
+                       request.resource.data.time is string;
+      
+      // Somente a administradora ou a Cloud Function pode atualizar/deletar
+      allow update, delete: if isAdmin();
+    }
+
+    // Regras para serviços
+    match /services/{serviceId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Regras para configurações de horários e estúdio
+    match /settings/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Regras para cadastro de clientes CRM
+    match /clients/{clientId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

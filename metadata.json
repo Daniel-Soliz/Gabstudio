@@ -1,0 +1,6 @@
+{
+  "name": "Gab Studio | Especialista em Cílios",
+  "description": "Site institucional, agendamento online e painel administrativo para Gab Santos, especialista em extensão de cílios na Zona Norte de São Paulo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

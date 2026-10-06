@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --color-dark-bg: #0D0509;
+  --color-dark-surface: #1A0A12;
+  --color-dark-card: rgba(26, 10, 18, 0.85);
+  --color-light-bg: #FFF5F8;
+  --color-light-surface: #FFFFFF;
+  --color-neon-pink: #FF2FA0;
+  --color-neon-glow: #FF8AD8;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+
+  --font-script: 'Great Vibes', 'Pinyon Script', cursive;
+  --font-display: 'Italiana', 'Cinzel', serif;
+  --font-serif: 'Cormorant Garamond', 'Cinzel', serif;
+  --font-sans: 'Jost', 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-bg);
+  color: #F5EBF0;
+  overflow-x: hidden;
+}
+
+/* Luxury typography helper classes */
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Neon Sign Effects */
+.neon-text {
+  color: #FFFFFF;
+  text-shadow: 
+    0 0 4px #FFFFFF,
+    0 0 10px var(--color-neon-glow),
+    0 0 20px var(--color-neon-pink),
+    0 0 35px var(--color-neon-pink);
+}
+
+.neon-text-subtle {
+  text-shadow: 
+    0 0 4px rgba(255, 47, 160, 0.5),
+    0 0 12px rgba(255, 47, 160, 0.35);
+}
+
+.neon-border {
+  border-color: rgba(255, 47, 160, 0.4);
+  box-shadow: 
+    0 0 10px rgba(255, 47, 160, 0.2),
+    inset 0 0 10px rgba(255, 47, 160, 0.08);
+}
+
+.neon-border:hover {
+  border-color: var(--color-neon-pink);
+  box-shadow: 
+    0 0 18px rgba(255, 47, 160, 0.5),
+    inset 0 0 12px rgba(255, 47, 160, 0.15);
+}
+
+.neon-button {
+  background: linear-gradient(135deg, rgba(255, 47, 160, 0.15) 0%, rgba(26, 10, 18, 0.9) 100%);
+  border: 1px solid rgba(255, 47, 160, 0.6);
+  box-shadow: 0 0 15px rgba(255, 47, 160, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neon-button:hover {
+  border-color: #FF2FA0;
+  box-shadow: 0 0 25px rgba(255, 47, 160, 0.6);
+  transform: translateY(-1px);
+}
+
+.neon-badge {
+  box-shadow: 0 0 8px rgba(255, 47, 160, 0.4);
+}
+
+/* Glassmorphism styling */
+.glass-dark {
+  background: rgba(26, 10, 18, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 138, 216, 0.15);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 47, 160, 0.12);
+}
+
+/* Subtle Neon Pulse Animation */
+@keyframes neonPulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(255, 47, 160, 0.6));
+  }
+  50% {
+    opacity: 0.88;
+    filter: drop-shadow(0 0 6px rgba(255, 47, 160, 0.3));
+  }
+}
+
+.animate-neon-pulse {
+  animation: neonPulse 3.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0509;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D1424;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2FA0;
+}
