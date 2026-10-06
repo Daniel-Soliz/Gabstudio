@@ -8,12 +8,12 @@ import confetti from 'canvas-confetti';
 import { 
   getServices, getSettings, getAvailableSlots, createAppointment, 
   TimeSlot, isDateAvailable 
-} from '../services/storage';
+} from './storage';
 import { 
   createPixPayment, generateGoogleCalendarUrl, 
   generateIcsFileContent, generateWhatsAppBookingUrl, PixPaymentData 
-} from '../services/mercadopago';
-import { ServiceItem, ScheduleSettings, Appointment, PaymentMethod } from '../types';
+} from './mercadopago';
+import { ServiceItem, ScheduleSettings, Appointment, PaymentMethod } from './types';
 import { LashIcon, VintageFlourish } from './DecorativeOrnament';
 
 interface BookingModalProps {
