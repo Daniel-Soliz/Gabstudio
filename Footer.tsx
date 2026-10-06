@@ -58,25 +58,25 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
             </h4>
             <ul className="space-y-2 text-xs font-light">
               <li>
-                <a href="#inicio" className="hover:text-[#FF8AD8] transition-colors">Início</a>
+                <a href="#/" className="hover:text-[#FF8AD8] transition-colors">Início</a>
               </li>
               <li>
-                <a href="#sobre" className="hover:text-[#FF8AD8] transition-colors">Sobre a Gab</a>
+                <a href="#/sobre" className="hover:text-[#FF8AD8] transition-colors">Sobre a Gab</a>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-[#FF8AD8] transition-colors">Procedimentos & Valores</a>
+                <a href="#/servicos" className="hover:text-[#FF8AD8] transition-colors">Procedimentos & Valores</a>
               </li>
               <li>
-                <a href="#galeria" className="hover:text-[#FF8AD8] transition-colors">Galeria de Resultados</a>
+                <a href="#/galeria" className="hover:text-[#FF8AD8] transition-colors">Galeria de Resultados</a>
               </li>
               <li>
-                <a href="#depoimentos" className="hover:text-[#FF8AD8] transition-colors">Depoimentos</a>
+                <a href="#/depoimentos" className="hover:text-[#FF8AD8] transition-colors">Depoimentos</a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#FF8AD8] transition-colors">Dúvidas Frequentes</a>
+                <a href="#/faq" className="hover:text-[#FF8AD8] transition-colors">Dúvidas Frequentes</a>
               </li>
               <li>
-                <a href="#contato" className="hover:text-[#FF8AD8] transition-colors">Localização</a>
+                <a href="#/contato" className="hover:text-[#FF8AD8] transition-colors">Localização</a>
               </li>
             </ul>
           </div>
