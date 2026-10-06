@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, Calendar, Sparkles, Check } from 'lucide-react';
-import { getServices } from '../services/storage';
-import { ServiceItem } from '../types';
+import { getServices } from './storage';
+import { ServiceItem } from './types';
 import { LashIcon, VintageFlourish } from './DecorativeOrnament';
 
 interface ServicesSectionProps {
