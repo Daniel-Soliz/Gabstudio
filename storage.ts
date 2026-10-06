@@ -1,12 +1,18 @@
 import { Appointment, ClientRecord, ScheduleSettings, ServiceItem, TestimonialItem, GalleryItem } from './types';
+import heroImg from './hero_eyelash_model_1791255520464.jpg';
+import aboutImg from './about_gab_santos_1791255531316.jpg';
+import russianImg from './service_russian_volume_1791255540362.jpg';
+import foxImg from './service_fox_eyes_1791255553605.jpg';
+import studioImg from './studio_interior_1791255562551.jpg';
+
 
 // Asset paths from generation
 export const ASSETS = {
-  hero: `${import.meta.env.BASE_URL}hero_eyelash_model_1791255520464.jpg`,
-  about: `${import.meta.env.BASE_URL}about_gab_santos_1791255531316.jpg`,
-  russianVolume: `${import.meta.env.BASE_URL}service_russian_volume_1791255540362.jpg`,
-  foxEyes: `${import.meta.env.BASE_URL}service_fox_eyes_1791255553605.jpg`,
-  studio: `${import.meta.env.BASE_URL}studio_interior_1791255562551.jpg`,
+  hero: heroImg,
+  about: aboutImg,
+  russianVolume: russianImg,
+  foxEyes: foxImg,
+  studio: studioImg,
 };
 
 const DEFAULT_SETTINGS: ScheduleSettings = {
