@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote, Sparkles } from 'lucide-react';
-import { getTestimonials } from '../services/storage';
-import { TestimonialItem } from '../types';
+import { getTestimonials } from './storage';
+import { TestimonialItem } from './types';
 import { VintageFlourish } from './DecorativeOrnament';
 
 export const TestimonialsSection: React.FC = () => {
