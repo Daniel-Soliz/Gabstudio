@@ -10,9 +10,9 @@ import {
   saveSettings, saveService, deleteService, updateAppointment, 
   createAppointment, getFinancialMetrics, playAppointmentChime,
   isDateAvailable
-} from '../../services/storage';
-import { Appointment, ServiceItem, ScheduleSettings, ClientRecord, AppointmentStatus, PaymentStatus } from '../../types';
-import { LashIcon } from '../DecorativeOrnament';
+} from './storage';
+import { Appointment, ServiceItem, ScheduleSettings, ClientRecord, AppointmentStatus, PaymentStatus } from './types';
+import { LashIcon } from './DecorativeOrnament';
 
 interface AdminModalProps {
   isOpen: boolean;
