@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Search, Calendar, Clock, AlertCircle, CheckCircle, MessageCircle, Ban } from 'lucide-react';
-import { getAppointments, cancelAppointment, getSettings } from '../services/storage';
-import { Appointment } from '../types';
+import { getAppointments, cancelAppointment, getSettings } from './storage';
+import { Appointment } from './types';
 import { LashIcon } from './DecorativeOrnament';
 
 interface AppointmentLookupModalProps {
