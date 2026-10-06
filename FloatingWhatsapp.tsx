@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import { getSettings } from '../services/storage';
+import { getSettings } from './storage';
 
 export const FloatingWhatsapp: React.FC = () => {
   const settings = getSettings();
