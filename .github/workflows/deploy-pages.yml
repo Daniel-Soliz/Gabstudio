@@ -1,4 +1,4 @@
-name: Deploy Gab Studio to GitHub Pages
+name: Build Gab Studio for GitHub Pages
 
 on:
   push:
@@ -6,38 +6,47 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: gabstudio-build
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Install dependencies
         run: npm install
-      - name: Build
+
+      - name: Build production site
         run: |
           npm run build
           mv dist/app.html dist/index.html
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+
+      - name: Sync compiled site to repository root
+        run: |
+          rm -rf assets
+          mkdir -p assets
+          cp dist/index.html ./index.html
+          cp -R dist/assets/. ./assets/
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.html assets
+
+          if git diff --cached --quiet; then
+            echo "Compiled site is already up to date."
+          else
+            git commit -m "chore: publish compiled Gab Studio [skip ci]"
+            git push origin HEAD:main
+          fi
