@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, Sparkles, ArrowRight, ShieldCheck, HeartHandshake, Eye } from 'lucide-react';
-import { ASSETS } from '../services/storage';
+import { ASSETS } from './storage';
 import { LashIcon, VintageFlourish, CornerOrnament } from './DecorativeOrnament';
 
 interface HeroProps {
