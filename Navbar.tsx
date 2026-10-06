@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Menu, X, Shield, Search } from 'lucide-react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { Calendar, Menu, X, Shield, Search, Home, Eye, Images, Heart, HelpCircle, MapPin } from 'lucide-react';
 
 interface NavbarProps {
   onOpenBooking: () => void;
@@ -10,138 +11,99 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenAdmin, onOpenLookup }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'Sobre', href: '#sobre' },
-    { label: 'Serviços', href: '#servicos' },
-    { label: 'Galeria', href: '#galeria' },
-    { label: 'Depoimentos', href: '#depoimentos' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contato', href: '#contato' },
+  const links = [
+    { label: 'Início', path: '/', icon: Home },
+    { label: 'Sobre', path: '/sobre', icon: Heart },
+    { label: 'Serviços', path: '/servicos', icon: Eye },
+    { label: 'Galeria', path: '/galeria', icon: Images },
+    { label: 'Depoimentos', path: '/depoimentos', icon: Heart },
+    { label: 'FAQ', path: '/faq', icon: HelpCircle },
+    { label: 'Contato', path: '/contato', icon: MapPin },
   ];
 
+  const go = (path: string) => {
+    setMobileMenuOpen(false);
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  };
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#0D0509]/90 backdrop-blur-md border-b border-[#FF2FA0]/20 py-3 shadow-lg shadow-black/50'
-          : 'bg-gradient-to-b from-[#0D0509]/90 to-transparent py-5'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Zone 1: Brand wordmark */}
-          <a
-            href="#inicio"
-            className="group flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF2FA0]"
-          >
-            <span className="font-script text-3xl sm:text-4xl text-white group-hover:text-[#FF8AD8] transition-colors tracking-wide neon-text-subtle">
-              Gab Studio
-            </span>
-          </a>
-
-          {/* Zone 2: Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-light tracking-wider text-stone-300">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="hover:text-[#FF8AD8] hover:border-b hover:border-[#FF2FA0] pb-0.5 transition-colors whitespace-nowrap"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Zone 3: Primary Actions */}
-          <div className="flex items-center gap-3">
-            {/* Appointment Lookup Button */}
-            <button
-              onClick={onOpenLookup}
-              title="Consultar ou Cancelar Agendamento"
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs text-stone-300 hover:text-white px-2.5 py-1.5 rounded-lg border border-stone-800 hover:border-[#FF2FA0]/40 transition-colors"
-            >
-              <Search className="w-3.5 h-3.5 text-[#FF2FA0]" />
-              <span>Minha Reserva</span>
-            </button>
-
-            {/* Admin Portal Quick Access */}
-            <button
-              onClick={onOpenAdmin}
-              title="Acesso da Gab Santos (Painel Admin)"
-              className="text-stone-400 hover:text-[#FF8AD8] p-2 rounded-lg hover:bg-white/5 transition-colors"
-              aria-label="Acesso Administrativo"
-            >
-              <Shield className="w-4 h-4 text-[#FF2FA0]" />
-            </button>
-
-            {/* Main Booking CTA */}
-            <button
-              onClick={onOpenBooking}
-              className="neon-button inline-flex items-center gap-2 px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium text-white rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#FF2FA0]"
-            >
-              <Calendar className="w-4 h-4 text-[#FF8AD8]" />
-              <span className="whitespace-nowrap tracking-wider">Agendar</span>
-            </button>
-
-            {/* Mobile Hamburger Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-stone-300 hover:text-white rounded-lg focus:outline-none"
-              aria-label="Abrir menu"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0D0509]/95 backdrop-blur-xl border-b border-[#FF2FA0]/20 shadow-xl shadow-black/30 py-2' : 'bg-[#0D0509]/92 backdrop-blur-md border-b border-[#FF8AD8]/10 py-2.5'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
+        <button type="button" onClick={() => go('/')} className="flex items-center gap-3 min-w-0 text-left">
+          <div className="w-10 h-10 rounded-2xl border border-[#FF2FA0]/30 bg-[#1C0B15] flex items-center justify-center shrink-0">
+            <Eye className="w-5 h-5 text-[#FF8AD8]" />
           </div>
+          <div className="min-w-0">
+            <div className="font-script text-2xl sm:text-3xl text-white leading-none whitespace-nowrap">Gab Studio</div>
+            <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#E6C280] mt-1 truncate">Lash Designer · Zona Norte SP</div>
+          </div>
+        </button>
+
+        <nav className="hidden lg:flex items-center gap-5">
+          {links.map(({ label, path }) => (
+            <NavLink
+              key={path}
+              to={path}
+              className={({ isActive }) => `text-xs uppercase tracking-wider font-medium transition-colors relative py-2 ${isActive ? 'text-[#FF8AD8]' : 'text-stone-300 hover:text-white'}`}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <button onClick={onOpenLookup} className="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#FF8AD8]/15 bg-[#160A12] text-xs text-stone-300 hover:text-white hover:border-[#FF2FA0]/40 transition-colors">
+            <Search className="w-4 h-4 text-[#FF8AD8]" />
+            Minha reserva
+          </button>
+          <button onClick={onOpenBooking} className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-[#FF2FA0] hover:bg-[#ff45aa] text-white text-xs font-semibold shadow-lg shadow-[#FF2FA0]/20">
+            <Calendar className="w-4 h-4" />
+            <span className="hidden xs:inline">Agendar</span>
+          </button>
+          <button onClick={onOpenAdmin} className="p-2 rounded-full text-stone-500 hover:text-[#FF8AD8]" title="Área administrativa">
+            <Shield className="w-4 h-4" />
+          </button>
+          <button onClick={() => setMobileMenuOpen(v => !v)} className="lg:hidden p-2 rounded-xl border border-[#FF8AD8]/15 bg-[#160A12] text-stone-300" aria-label="Abrir menu">
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#1A0A12]/98 border-b border-[#FF2FA0]/30 backdrop-blur-xl px-6 py-6 transition-all">
-          <nav className="flex flex-col gap-4 text-base font-light text-stone-200">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2 border-b border-stone-800/80 hover:text-[#FF8AD8] transition-colors"
+        <div className="lg:hidden px-4 pt-3 pb-4 border-t border-[#FF8AD8]/10 bg-[#0D0509]/98 backdrop-blur-xl">
+          <div className="grid grid-cols-2 gap-2">
+            {links.map(({ label, path, icon: Icon }) => (
+              <button
+                key={path}
+                type="button"
+                onClick={() => go(path)}
+                className="flex items-center gap-3 text-left p-3 rounded-2xl border border-[#FF8AD8]/10 bg-[#160A12] hover:border-[#FF2FA0]/35"
               >
-                {link.label}
-              </a>
+                <div className="w-9 h-9 rounded-xl bg-[#24101C] border border-[#FF8AD8]/15 flex items-center justify-center shrink-0">
+                  <Icon className="w-4 h-4 text-[#FF8AD8]" />
+                </div>
+                <span className="text-xs font-medium text-stone-200">{label}</span>
+              </button>
             ))}
-            <div className="pt-3 flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenLookup();
-                }}
-                className="w-full py-2.5 px-4 text-sm rounded-lg border border-stone-700 text-stone-300 flex items-center justify-center gap-2 hover:border-[#FF2FA0]"
-              >
-                <Search className="w-4 h-4 text-[#FF2FA0]" />
-                <span>Consultar Meu Agendamento</span>
-              </button>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenAdmin();
-                }}
-                className="w-full py-2.5 px-4 text-sm rounded-lg bg-stone-900 text-stone-300 flex items-center justify-center gap-2 border border-stone-800"
-              >
-                <Shield className="w-4 h-4 text-[#FF2FA0]" />
-                <span>Painel da Gab (Admin)</span>
-              </button>
-            </div>
-          </nav>
+          </div>
+          <div className="grid grid-cols-2 gap-2 mt-2">
+            <button onClick={() => { setMobileMenuOpen(false); onOpenLookup(); }} className="p-3 rounded-2xl border border-stone-800 bg-stone-900/60 text-xs text-stone-300 flex items-center justify-center gap-2">
+              <Search className="w-4 h-4 text-[#FF8AD8]" /> Minha reserva
+            </button>
+            <button onClick={() => { setMobileMenuOpen(false); onOpenBooking(); }} className="p-3 rounded-2xl bg-[#FF2FA0] text-xs font-semibold text-white flex items-center justify-center gap-2">
+              <Calendar className="w-4 h-4" /> Agendar
+            </button>
+          </div>
         </div>
       )}
     </header>
