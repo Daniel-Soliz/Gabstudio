@@ -194,11 +194,26 @@ function HomePage({
                   key={title}
                   type="button"
                   onClick={() => onNavigate(page)}
-                  className="gs-feature-card"
+                  className={`gs-feature-card gs-feature-card-${page}`}
                 >
                   <div className="gs-card-icon">
                     <Icon className="w-5 h-5" />
                   </div>
+
+                  {page === 'galeria' && (
+                    <div className="gs-gallery-polaroids" aria-hidden="true">
+                      <span className="gs-polaroid gs-polaroid-one">
+                        <img src={ASSETS.foxEyes} alt="" />
+                      </span>
+                      <span className="gs-polaroid gs-polaroid-two">
+                        <img src={ASSETS.russianVolume} alt="" />
+                      </span>
+                    </div>
+                  )}
+
+                  {page === 'depoimentos' && (
+                    <div className="gs-quote-decoration" aria-hidden="true">“</div>
+                  )}
 
                   <div className="gs-feature-copy">
                     <h2>{title}</h2>
