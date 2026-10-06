@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles, Award, Shield, CheckCircle2 } from 'lucide-react';
-import { ASSETS } from '../services/storage';
+import { ASSETS } from './storage';
 import { LashIcon, VintageFlourish, CornerOrnament } from './DecorativeOrnament';
 
 export const About: React.FC = () => {
