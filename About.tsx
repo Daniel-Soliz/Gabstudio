@@ -1,117 +1,85 @@
 import React from 'react';
-import { Sparkles, Award, Shield, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Heart, ShieldCheck, Eye, Info, CheckCircle2 } from 'lucide-react';
 import { ASSETS } from './storage';
-import { LashIcon, VintageFlourish, CornerOrnament } from './DecorativeOrnament';
 
 export const About: React.FC = () => {
   return (
-    <section id="sobre" className="relative py-24 bg-[#140810] border-y border-[#FF2FA0]/15 overflow-hidden">
-      {/* Delicate background illumination */}
-      <div className="absolute top-1/2 right-0 w-80 h-80 bg-[#FF2FA0]/8 rounded-full blur-[100px] pointer-events-none" />
+    <section className="relative py-8 sm:py-12 lg:py-16 bg-[#140810] overflow-hidden">
+      <div className="absolute -top-24 right-0 w-80 h-80 rounded-full bg-[#FF2FA0]/8 blur-[110px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Portrait Column */}
-          <div className="lg:col-span-5 relative flex justify-center order-2 lg:order-1">
-            <div className="relative w-full max-w-sm">
-              {/* Outer decorative glow frame */}
-              <div className="absolute -inset-1 bg-gradient-to-tr from-[#FF2FA0]/40 via-transparent to-[#FF8AD8]/30 rounded-3xl blur-md" />
-              
-              <div className="relative bg-[#1A0A12] p-2.5 rounded-3xl border border-[#FF2FA0]/30 shadow-2xl">
-                <CornerOrnament position="top-left" className="absolute top-4 left-4 w-6 h-6 text-[#FF8AD8]" />
-                <CornerOrnament position="top-right" className="absolute top-4 right-4 w-6 h-6 text-[#FF8AD8]" />
-                <CornerOrnament position="bottom-left" className="absolute bottom-4 left-4 w-6 h-6 text-[#FF8AD8]" />
-                <CornerOrnament position="bottom-right" className="absolute bottom-4 right-4 w-6 h-6 text-[#FF8AD8]" />
-
-                <div className="overflow-hidden rounded-2xl aspect-[3/4] bg-stone-900">
-                  <img
-                    src={ASSETS.about}
-                    alt="Gab Santos - Lash Designer Especialista"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="mt-3 text-center py-2">
-                  <p className="font-script text-2xl text-white">Gab Santos</p>
-                  <p className="font-serif-luxury text-xs tracking-widest text-[#E6C280] uppercase">
-                    Lash Designer Certificada
-                  </p>
-                </div>
-              </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-6 lg:gap-10 items-stretch">
+          <div className="relative overflow-hidden rounded-[28px] border border-[#FF8AD8]/15 bg-[#160A12] min-h-[420px]">
+            <img
+              src={ASSETS.about}
+              alt="Imagem demonstrativa da profissional Gab Studio"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0509] via-[#0D0509]/20 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-black/55 backdrop-blur-md border border-white/10 px-3 py-1.5 text-[10px] uppercase tracking-wider text-white">
+                <Info className="w-3.5 h-3.5 text-[#E6C280]" />
+                Apresentação demonstrativa
+              </span>
+              <h1 className="font-script text-4xl text-white mt-4">Gab Santos</h1>
+              <p className="text-xs uppercase tracking-[0.18em] text-[#E6C280] mt-1">Lash Designer · Conceito de marca</p>
             </div>
           </div>
 
-          {/* Text Content Column */}
-          <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-            <div>
-              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#FF8AD8] font-medium mb-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#FF2FA0]" />
-                <span className="font-serif-luxury">Conheça Sua Especialista</span>
-              </div>
-              <h2 className="font-display text-3xl sm:text-4xl text-white font-normal leading-snug">
-                Arte, precisão e respeito absoluto pela <span className="text-[#FF8AD8] italic">saúde dos seus fios</span>
-              </h2>
+          <div className="rounded-[28px] border border-[#FF8AD8]/10 bg-[#10070D]/70 p-6 sm:p-8 lg:p-10">
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#FF8AD8]">
+              <Sparkles className="w-4 h-4 text-[#FF2FA0]" />
+              Sobre a profissional
             </div>
 
-            <div className="text-stone-300 font-sans-clean font-light text-sm sm:text-base space-y-4 leading-relaxed">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white mt-3 leading-tight">
+              Um espaço pensado para realçar a <span className="text-[#FF8AD8] italic">beleza do olhar</span>
+            </h2>
+
+            <div className="mt-5 space-y-4 text-sm sm:text-base text-stone-300 leading-relaxed">
               <p>
-                Olá, eu sou a <strong className="text-white font-normal">Gab Santos</strong>. Apaixonada por realçar a beleza feminina através do olhar, criei o <strong>Gab Studio</strong> na Zona Norte de São Paulo para oferecer muito mais do que extensões de cílios: uma experiência acolhedora de autoestima, relaxamento e sofisticação.
+                Esta área mostra como a história da profissional pode ser apresentada de forma mais humana e valorizada. A proposta é transmitir cuidado, atenção aos detalhes e uma experiência feminina do primeiro contato ao pós-atendimento.
               </p>
               <p>
-                Acredito firmemente que um olhar marcante nunca deve custar a saúde dos seus cílios naturais. Cada aplicação é antecedida por uma breve consulta de visagismo para identificar a curvatura, espessura e comprimento ideais para a anatomia dos seus olhos e rotina de vida.
+                O texto final pode contar a trajetória real da Gab, técnicas em que ela atua, estilo de atendimento, cursos, diferenciais e tudo o que torna o trabalho dela único.
               </p>
             </div>
 
-            {/* 3 Pillars / Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-[#1A0A12]/90 border border-stone-800 hover:border-[#FF2FA0]/40 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-[#FF2FA0]/15 flex items-center justify-center text-[#FF2FA0] mb-2.5">
-                  <Award className="w-4 h-4" />
+            <div className="mt-7 grid sm:grid-cols-3 gap-3">
+              <div className="rounded-2xl border border-[#FF8AD8]/10 bg-[#160A12] p-4">
+                <div className="w-10 h-10 rounded-2xl bg-[#FF2FA0]/12 flex items-center justify-center">
+                  <Eye className="w-5 h-5 text-[#FF8AD8]" />
                 </div>
-                <h3 className="font-display text-white text-sm font-medium mb-1">
-                  Materiais Premium
-                </h3>
-                <p className="text-xs text-stone-400 font-light leading-relaxed">
-                  Fios hipoalergênicos ultrafinos e colas com certificação e testes dermatológicos.
-                </p>
+                <h3 className="font-display text-sm text-white mt-3">Olhar personalizado</h3>
+                <p className="text-xs text-stone-400 mt-1 leading-relaxed">Apresentar efeitos e técnicas de acordo com o estilo desejado por cada cliente.</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#1A0A12]/90 border border-stone-800 hover:border-[#FF2FA0]/40 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-[#FF2FA0]/15 flex items-center justify-center text-[#FF2FA0] mb-2.5">
-                  <Shield className="w-4 h-4" />
+              <div className="rounded-2xl border border-[#FF8AD8]/10 bg-[#160A12] p-4">
+                <div className="w-10 h-10 rounded-2xl bg-[#FF2FA0]/12 flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5 text-[#FF8AD8]" />
                 </div>
-                <h3 className="font-display text-white text-sm font-medium mb-1">
-                  Biossegurança Rigorosa
-                </h3>
-                <p className="text-xs text-stone-400 font-light leading-relaxed">
-                  Pinças esterilizadas, escovinhas descartáveis e protocolo rigoroso de assepsia.
-                </p>
+                <h3 className="font-display text-sm text-white mt-3">Confiança no atendimento</h3>
+                <p className="text-xs text-stone-400 mt-1 leading-relaxed">Comunicar rotina de higiene, organização e cuidados reais adotados pela profissional.</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#1A0A12]/90 border border-stone-800 hover:border-[#FF2FA0]/40 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-[#FF2FA0]/15 flex items-center justify-center text-[#FF2FA0] mb-2.5">
-                  <CheckCircle2 className="w-4 h-4" />
+              <div className="rounded-2xl border border-[#FF8AD8]/10 bg-[#160A12] p-4">
+                <div className="w-10 h-10 rounded-2xl bg-[#FF2FA0]/12 flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-[#FF8AD8]" />
                 </div>
-                <h3 className="font-display text-white text-sm font-medium mb-1">
-                  Resultado Sob Medida
-                </h3>
-                <p className="text-xs text-stone-400 font-light leading-relaxed">
-                  Do clássico mais sutil ao mega volume, desenhado para valorizar seus traços únicos.
-                </p>
+                <h3 className="font-display text-sm text-white mt-3">Experiência feminina</h3>
+                <p className="text-xs text-stone-400 mt-1 leading-relaxed">Uma comunicação acolhedora, elegante e alinhada ao público de beleza.</p>
               </div>
             </div>
 
-            {/* Quote / Divider */}
-            <div className="pt-2 flex items-center gap-3 text-stone-400 text-xs italic">
-              <LashIcon className="w-5 h-5 text-[#FF2FA0] shrink-0" />
-              <span>"Cílios perfeitos não são apenas sobre beleza exterior, são sobre acordar sentindo-se pronta para o mundo."</span>
+            <div className="mt-7 rounded-2xl border border-[#E6C280]/20 bg-[#E6C280]/5 p-4">
+              <div className="flex gap-3">
+                <CheckCircle2 className="w-5 h-5 text-[#E6C280] shrink-0" />
+                <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                  <strong className="text-[#F3E5AB]">Na versão final:</strong> esta apresentação será personalizada com a história, cursos, endereço, fotos e diferenciais verdadeiros da profissional.
+                </p>
+              </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
