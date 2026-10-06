@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CalendarDays, Menu, X, Search, Home, Eye, Images, Heart, HelpCircle, MapPin, UserRound } from 'lucide-react';
+import { EyeLogo } from './DecorativeOrnament';
 
 type PublicPage = 'home' | 'sobre' | 'servicos' | 'galeria' | 'depoimentos' | 'faq' | 'contato';
 
@@ -53,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           aria-label="Ir para o início"
         >
           <div className="gs-brand-mark" aria-hidden="true">
-            <Eye className="w-5 h-5" />
+            <EyeLogo className="w-full h-full" />
           </div>
           <div className="gs-brand-copy">
             <div className="gs-brand-name">Gab Studio</div>
@@ -91,6 +92,16 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <CalendarDays className="w-4 h-4" />
             <span>Agendar</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={onOpenAdmin}
+            className="gs-admin-heart"
+            aria-label="Área administrativa"
+            title="Área administrativa"
+          >
+            <Heart className="w-5 h-5" />
           </button>
 
           <button
