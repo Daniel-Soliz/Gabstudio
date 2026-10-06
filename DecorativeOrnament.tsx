@@ -72,3 +72,31 @@ export const CornerOrnament: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     </svg>
   );
 };
+
+
+export const EyeLogo: React.FC<{ className?: string }> = ({ className = 'w-16 h-10' }) => (
+  <svg
+    viewBox="0 0 72 46"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M11 24C20 15 31 12 41 14C50 15 57 19 62 24C57 29 50 33 41 34C31 35 20 32 11 24Z" />
+    <path d="M16 23C23 18 31 17 39 18C47 19 53 21 58 24" />
+    <circle cx="38" cy="24" r="7" />
+    <circle cx="38" cy="24" r="2.5" fill="currentColor" stroke="none" />
+    <path d="M15 17L9 13" />
+    <path d="M21 13L18 7" />
+    <path d="M29 11L28 4" />
+    <path d="M47 12L50 6" />
+    <path d="M55 16L61 11" />
+    <path d="M10 31L5 35" />
+    <path d="M58 31L64 35" />
+    <path d="M4 9L4.7 11.3L7 12L4.7 12.7L4 15L3.3 12.7L1 12L3.3 11.3L4 9Z" fill="currentColor" stroke="none" />
+    <path d="M66 4L66.6 6L69 6.6L66.6 7.2L66 9.5L65.4 7.2L63 6.6L65.4 6L66 4Z" fill="currentColor" stroke="none" />
+  </svg>
+);
