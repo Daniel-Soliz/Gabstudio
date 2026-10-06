@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Clock, MessageCircle, Instagram, Sparkles, Navigation, Calendar } from 'lucide-react';
-import { getSettings } from '../services/storage';
-import { ScheduleSettings } from '../types';
+import { getSettings } from './storage';
+import { ScheduleSettings } from './types';
 import { VintageFlourish } from './DecorativeOrnament';
 
 interface ContactSectionProps {
