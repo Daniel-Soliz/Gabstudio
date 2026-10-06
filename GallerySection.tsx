@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Instagram, Sparkles, X, ZoomIn, ArrowRight } from 'lucide-react';
-import { getGallery } from '../services/storage';
-import { GalleryItem } from '../types';
+import { getGallery } from './storage';
+import { GalleryItem } from './types';
 import { VintageFlourish } from './DecorativeOrnament';
 
 export const GallerySection: React.FC = () => {
