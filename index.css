@@ -137,19 +137,20 @@ body {
 
 /* GAB STUDIO LUXURY BEAUTY THEME V2 */
 :root {
-  --gs-ivory: #F8F5F1;
+  --gs-ivory: #F7F4F2;
   --gs-paper: #FFFDFC;
-  --gs-blush: #F1E7E2;
-  --gs-taupe: #D8C8BE;
-  --gs-taupe-deep: #C8B3A8;
-  --gs-espresso: #3D302A;
-  --gs-mocha: #5E4B42;
-  --gs-muted: #827168;
-  --gs-nude: #B78D7D;
-  --gs-nude-deep: #9D7465;
-  --gs-bronze: #9B755A;
-  --gs-line: rgba(93, 72, 61, .16);
-  --gs-shadow: 0 18px 50px rgba(68, 49, 40, .09);
+  --gs-blush: #F0E4E7;
+  --gs-taupe: #D8C9C6;
+  --gs-taupe-deep: #C5B0AD;
+  --gs-espresso: #352B2E;
+  --gs-mocha: #59484D;
+  --gs-muted: #7E6D72;
+  --gs-nude: #B98F98;
+  --gs-nude-deep: #9B6874;
+  --gs-bronze: #9B7C72;
+  --gs-plum: #744B57;
+  --gs-line: rgba(88, 66, 72, .16);
+  --gs-shadow: 0 18px 50px rgba(69, 48, 55, .09);
 }
 
 html,
@@ -193,7 +194,7 @@ select {
 }
 
 ::selection {
-  background: #DCC8BE !important;
+  background: #DEC8CE !important;
   color: var(--gs-espresso) !important;
 }
 
@@ -238,7 +239,7 @@ select {
 [class*="text-[#FF2FA0]"],
 [class*="text-[#FF8AD8]"],
 [class*="text-[#FFD1EA]"] {
-  color: var(--gs-nude-deep) !important;
+  color: var(--gs-plum) !important;
 }
 
 [class*="text-[#E6C280]"],
@@ -258,19 +259,19 @@ div[class*="aspect-"] img ~ div .text-white {
 section img ~ div .text-stone-300,
 article img ~ div .text-stone-300,
 button img ~ div .text-stone-300 {
-  color: #F4ECE8 !important;
+  color: #F7EEF1 !important;
 }
 
 /* Branded accents */
 [class*="bg-[#FF2FA0]"],
 [class*="bg-[#ff45aa]"] {
-  background-color: var(--gs-espresso) !important;
+  background-color: #744B57 !important;
   color: #FFFDFC !important;
 }
 
 [class*="hover:bg-[#FF2FA0]"]:hover,
 [class*="hover:bg-[#ff45aa]"]:hover {
-  background-color: var(--gs-mocha) !important;
+  background-color: #62414B !important;
 }
 
 [class*="border-[#FF2FA0]"],
@@ -294,29 +295,29 @@ article,
 section button[class*="rounded-[22px]"],
 section button[class*="rounded-2xl"],
 section article[class*="rounded"] {
-  box-shadow: 0 12px 34px rgba(68, 49, 40, .06);
+  box-shadow: 0 12px 34px rgba(72, 49, 57, .06);
 }
 
 section button[class*="rounded-[22px]"]:hover,
 section article[class*="rounded"]:hover {
-  box-shadow: 0 18px 42px rgba(68, 49, 40, .11);
+  box-shadow: 0 18px 42px rgba(72, 49, 57, .11);
 }
 
 /* Premium gradients */
 [class*="bg-gradient-to-br"] {
-  background-image: linear-gradient(135deg, #FFFDFC 0%, #F3E8E2 58%, #E7D7CF 100%) !important;
+  background-image: linear-gradient(135deg, #FFFDFC 0%, #F2E6EA 58%, #E5D5DA 100%) !important;
 }
 
 /* Image overlay gradients stay cinematic */
 [class*="bg-gradient-to-t"][class*="from-[#0D0509]"] {
-  background-image: linear-gradient(to top, rgba(35, 25, 21, .84), rgba(54, 41, 35, .36), rgba(20, 15, 12, .04)) !important;
+  background-image: linear-gradient(to top, rgba(42, 27, 33, .84), rgba(70, 46, 55, .36), rgba(24, 16, 19, .04)) !important;
 }
 
 /* Header */
 header {
-  background: rgba(255, 253, 252, .94) !important;
+  background: rgba(255, 253, 252, .95) !important;
   border-color: var(--gs-line) !important;
-  box-shadow: 0 8px 30px rgba(66, 47, 39, .05) !important;
+  box-shadow: 0 8px 30px rgba(73, 48, 57, .05) !important;
 }
 
 header .font-script {
@@ -329,7 +330,7 @@ header nav button {
   font-size: .69rem !important;
   letter-spacing: .12em !important;
   font-weight: 600 !important;
-  color: #6F5C52 !important;
+  color: #715D63 !important;
 }
 
 header nav button:hover {
@@ -338,7 +339,7 @@ header nav button:hover {
 
 /* Footer */
 footer {
-  background: #EEE5DF !important;
+  background: #EEE5E8 !important;
   border-color: var(--gs-line) !important;
   color: var(--gs-mocha) !important;
 }
@@ -349,7 +350,7 @@ textarea,
 select {
   background: #FFFDFC !important;
   color: var(--gs-espresso) !important;
-  border-color: #DCCFC7 !important;
+  border-color: #DDCFD3 !important;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.5);
 }
 
@@ -362,26 +363,26 @@ select:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: #A19087 !important;
+  color: #A18D93 !important;
 }
 
 /* Modal backdrops */
 [class*="fixed"][class*="inset-0"][class*="bg-black"] {
-  background-color: rgba(49, 37, 31, .48) !important;
+  background-color: rgba(52, 36, 43, .48) !important;
 }
 
 /* Buttons */
 .neon-button {
-  background: var(--gs-espresso) !important;
-  border: 1px solid var(--gs-espresso) !important;
+  background: #744B57 !important;
+  border: 1px solid #744B57 !important;
   color: #FFFDFC !important;
-  box-shadow: 0 12px 28px rgba(58, 42, 34, .14) !important;
+  box-shadow: 0 12px 28px rgba(81, 50, 62, .14) !important;
 }
 
 .neon-button:hover {
-  background: var(--gs-mocha) !important;
-  border-color: var(--gs-mocha) !important;
-  box-shadow: 0 15px 34px rgba(58, 42, 34, .18) !important;
+  background: #62414B !important;
+  border-color: #62414B !important;
+  box-shadow: 0 15px 34px rgba(81, 50, 62, .18) !important;
 }
 
 .neon-text,
@@ -399,15 +400,15 @@ textarea::placeholder {
 
 /* Scrollbar */
 ::-webkit-scrollbar-track {
-  background: #EEE5DF !important;
+  background: #EEE5E8 !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B9A69B !important;
+  background: #B9A3AA !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #987D6F !important;
+  background: #967982 !important;
 }
 
 /* Keep WhatsApp green */
