@@ -133,3 +133,216 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #FF2FA0;
 }
+
+
+/* GAB STUDIO CREAM THEME V1 */
+:root {
+  --cream-bg: #F3E6D5;
+  --cream-soft: #FAF3E9;
+  --cream-alt: #EEDDC9;
+  --brown-card: #E4CEB6;
+  --brown-border: #D1B398;
+  --brown-primary: #4A382F;
+  --brown-secondary: #6B5649;
+  --brown-muted: #8B7465;
+  --caramel: #B77A52;
+  --caramel-hover: #A86C48;
+  --sand: #C69A75;
+  --sand-soft: #DFC4A8;
+}
+
+html,
+body,
+#root {
+  background: var(--cream-bg) !important;
+  color: var(--brown-primary) !important;
+}
+
+body {
+  color: var(--brown-primary) !important;
+}
+
+::selection {
+  background: #D6B89B !important;
+  color: var(--brown-primary) !important;
+}
+
+/* Main cream backgrounds */
+[class*="bg-[#0D0509]"],
+[class*="bg-[#10070D]"],
+[class*="bg-[#140810]"] {
+  background-color: var(--cream-bg) !important;
+}
+
+[class*="bg-[#160A12]"],
+[class*="bg-[#1A0A12]"],
+[class*="bg-[#1C0B15]"],
+[class*="bg-[#200D17]"],
+[class*="bg-[#24101C]"],
+[class*="bg-[#26101E]"] {
+  background-color: var(--cream-soft) !important;
+}
+
+[class*="bg-stone-900"],
+[class*="bg-stone-800"],
+[class*="bg-stone-700"] {
+  background-color: var(--cream-alt) !important;
+}
+
+/* Accent buttons and badges */
+[class*="bg-[#FF2FA0]"],
+[class*="bg-[#ff45aa]"] {
+  background-color: var(--caramel) !important;
+  color: #FFF8F0 !important;
+}
+
+[class*="hover:bg-[#ff45aa]"]:hover,
+[class*="hover:bg-[#FF2FA0]"]:hover {
+  background-color: var(--caramel-hover) !important;
+}
+
+/* Warm gradients throughout the site */
+[class*="bg-gradient"] {
+  background-image: linear-gradient(135deg, #F8EFE5 0%, #E9D5BF 55%, #DEC2A5 100%) !important;
+}
+
+/* Image overlays stay elegant but warm */
+[class*="from-[#0D0509]"][class*="via-"] {
+  background-image: linear-gradient(to top, rgba(74,56,47,.82), rgba(120,91,72,.30), rgba(243,230,213,.04)) !important;
+}
+
+/* Typography */
+[class*="text-white"],
+[class*="text-stone-100"] {
+  color: var(--brown-primary) !important;
+}
+
+[class*="text-stone-200"],
+[class*="text-stone-300"] {
+  color: var(--brown-secondary) !important;
+}
+
+[class*="text-stone-400"],
+[class*="text-stone-500"] {
+  color: var(--brown-muted) !important;
+}
+
+[class*="text-[#FF2FA0]"],
+[class*="text-[#FF8AD8]"] {
+  color: var(--caramel) !important;
+}
+
+[class*="text-[#FFD1EA]"],
+[class*="text-[#E6C280]"],
+[class*="text-[#F3E5AB]"] {
+  color: #8A6248 !important;
+}
+
+/* Make text over hero/photo overlays readable */
+[class*="bg-gradient-to-t"] [class*="text-white"],
+[class*="absolute"] [class*="text-white"] {
+  color: #FFF8F0 !important;
+}
+
+/* Borders */
+[class*="border-[#FF2FA0]"],
+[class*="border-[#FF8AD8]"],
+[class*="border-stone-700"],
+[class*="border-stone-800"],
+[class*="border-stone-900"] {
+  border-color: var(--brown-border) !important;
+}
+
+/* Shadows/glows become subtle warm shadows */
+[class*="shadow-[#FF2FA0]"],
+[class*="shadow-black"] {
+  --tw-shadow-color: rgba(114, 83, 64, .18) !important;
+}
+
+/* Header and footer */
+header {
+  background: rgba(248, 239, 229, .96) !important;
+  border-color: #D7BCA2 !important;
+  color: var(--brown-primary) !important;
+}
+
+footer {
+  background: #E2CDB6 !important;
+  color: var(--brown-primary) !important;
+  border-color: #CFAF91 !important;
+}
+
+/* Inputs / forms / modals */
+input,
+textarea,
+select {
+  background-color: #FFF9F2 !important;
+  color: var(--brown-primary) !important;
+  border-color: #D1B398 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9A8373 !important;
+}
+
+[class*="fixed"][class*="inset-0"][class*="bg-black"] {
+  background-color: rgba(78, 58, 46, .48) !important;
+}
+
+/* Warm scrollbar */
+::-webkit-scrollbar-track {
+  background: #E9D7C3 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B99170 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9D7658 !important;
+}
+
+/* Primary branded helpers */
+.neon-text,
+.neon-text-subtle {
+  color: var(--brown-primary) !important;
+  text-shadow: none !important;
+}
+
+.neon-border,
+.neon-border:hover {
+  border-color: var(--brown-border) !important;
+  box-shadow: 0 8px 30px rgba(111, 80, 61, .10) !important;
+}
+
+.neon-button {
+  background: linear-gradient(135deg, #B77A52, #C99773) !important;
+  border-color: #AA704C !important;
+  color: #FFF8F0 !important;
+  box-shadow: 0 10px 24px rgba(111, 80, 61, .16) !important;
+}
+
+.neon-button:hover {
+  background: linear-gradient(135deg, #A86C48, #BC8560) !important;
+  border-color: #986143 !important;
+  box-shadow: 0 12px 28px rgba(111, 80, 61, .22) !important;
+}
+
+/* Ensure cards feel consistent */
+article,
+.glass-dark {
+  background: rgba(250, 243, 233, .94) !important;
+  border-color: var(--brown-border) !important;
+  color: var(--brown-primary) !important;
+}
+
+.glass-light {
+  background: rgba(255, 249, 242, .94) !important;
+  border-color: var(--brown-border) !important;
+}
+
+/* Preserve WhatsApp brand green where explicitly used */
+[class*="text-[#25D366]"] {
+  color: #25D366 !important;
+}
