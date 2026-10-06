@@ -1,86 +1,83 @@
 import React, { useState } from 'react';
-import { Star, ChevronLeft, ChevronRight, Quote, Sparkles } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Quote, Sparkles, Info } from 'lucide-react';
 import { getTestimonials } from './storage';
 import { TestimonialItem } from './types';
-import { VintageFlourish } from './DecorativeOrnament';
 
 export const TestimonialsSection: React.FC = () => {
   const [testimonials] = useState<TestimonialItem[]>(getTestimonials());
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
-
+  const prevSlide = () => setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  const nextSlide = () => setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   const current = testimonials[currentIndex];
 
+  if (!current) return null;
+
   return (
-    <section id="depoimentos" className="relative py-24 bg-[#140810] border-y border-[#FF2FA0]/15 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#FF8AD8]">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF2FA0]" />
-            <span className="font-serif-luxury">Satisfação Comprovada</span>
+    <section className="relative py-8 sm:py-12 lg:py-16 bg-[#0D0509]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[1fr_0.9fr] gap-5 items-end mb-8">
+          <div>
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#FF8AD8]">
+              <Sparkles className="w-4 h-4 text-[#FF2FA0]" />
+              Prova social
+            </div>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white mt-3 leading-tight">
+              Como as avaliações podem <span className="text-[#FF8AD8] italic">valorizar o trabalho</span>
+            </h1>
+            <p className="mt-3 text-sm sm:text-base text-stone-400 max-w-2xl leading-relaxed">
+              A página pode destacar experiências de clientes e ajudar novas pessoas a se sentirem mais seguras antes de agendar.
+            </p>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl text-white font-normal">
-            O Que Minhas <span className="text-[#FF8AD8] italic">Clientes Dizem</span>
-          </h2>
-          <p className="font-sans-clean text-stone-400 text-sm font-light">
-            Depoimentos reais de quem confia seu olhar aos cuidados do Gab Studio.
-          </p>
-          <div className="flex justify-center pt-1 text-[#FF2FA0]/40">
-            <VintageFlourish className="w-36 h-5" />
+
+          <div className="rounded-2xl border border-[#E6C280]/20 bg-[#E6C280]/5 p-4 flex items-start gap-3">
+            <Info className="w-4 h-4 text-[#E6C280] shrink-0 mt-0.5" />
+            <p className="text-xs text-stone-300 leading-relaxed">
+              <strong className="text-[#F3E5AB]">Depoimentos demonstrativos:</strong> os textos abaixo são exemplos de apresentação e devem ser trocados pelas avaliações reais da profissional antes da divulgação final.
+            </p>
           </div>
         </div>
 
-        {/* Featured Testimonial Spotlight */}
-        <div className="max-w-3xl mx-auto bg-[#1A0A12] rounded-3xl border border-[#FF2FA0]/30 p-8 sm:p-12 relative shadow-2xl">
-          <Quote className="absolute top-6 right-8 w-12 h-12 text-[#FF2FA0]/15 pointer-events-none" />
+        <div className="relative overflow-hidden rounded-[28px] border border-[#FF2FA0]/25 bg-gradient-to-br from-[#1A0A12] via-[#160A12] to-[#10070D] p-6 sm:p-8 lg:p-10">
+          <Quote className="absolute top-6 right-7 w-14 h-14 text-[#FF2FA0]/10" />
 
-          {/* Stars */}
-          <div className="flex items-center gap-1 mb-6">
-            {Array.from({ length: current.stars }).map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-[#FF2FA0] text-[#FF2FA0]" />
-            ))}
+          <div className="flex items-center justify-between gap-4 mb-6">
+            <div className="flex gap-1">
+              {Array.from({ length: current.stars }).map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-[#FF2FA0] text-[#FF2FA0]" />
+              ))}
+            </div>
+            <span className="rounded-full border border-[#FF8AD8]/15 bg-[#24101C] px-3 py-1 text-[10px] uppercase tracking-wider text-[#FF8AD8]">
+              Exemplo de avaliação
+            </span>
           </div>
 
-          {/* Text */}
-          <p className="font-serif-luxury text-lg sm:text-xl text-stone-200 italic leading-relaxed mb-8">
-            "{current.text}"
+          <p className="font-serif-luxury text-xl sm:text-2xl lg:text-3xl text-stone-100 italic leading-relaxed max-w-4xl">
+            “{current.text}”
           </p>
 
-          {/* Author */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-stone-800">
+          <div className="mt-8 pt-6 border-t border-[#FF8AD8]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
             <div>
-              <h4 className="font-display text-base text-white font-medium">
-                {current.name}
-              </h4>
-              <p className="text-xs text-stone-400 font-light mt-0.5">
-                {current.role} · Procedimento: <span className="text-[#FF8AD8]">{current.service}</span>
+              <h2 className="font-display text-lg text-white">{current.name}</h2>
+              <p className="text-xs text-stone-400 mt-1">
+                {current.role} · <span className="text-[#FF8AD8]">{current.service}</span>
               </p>
             </div>
 
-            {/* Carousel navigation controls */}
             <div className="flex items-center gap-2">
               <button
+                type="button"
                 onClick={prevSlide}
-                className="w-10 h-10 rounded-full border border-stone-800 hover:border-[#FF2FA0] text-stone-300 hover:text-white flex items-center justify-center transition-colors"
+                className="w-11 h-11 rounded-full border border-[#FF8AD8]/15 bg-[#160A12] text-stone-300 hover:text-white hover:border-[#FF2FA0]/45 flex items-center justify-center"
                 aria-label="Depoimento anterior"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <span className="text-xs text-stone-400 tabular-nums px-2">
-                {currentIndex + 1} / {testimonials.length}
-              </span>
+              <span className="text-xs text-stone-500 tabular-nums px-2">{currentIndex + 1} / {testimonials.length}</span>
               <button
+                type="button"
                 onClick={nextSlide}
-                className="w-10 h-10 rounded-full border border-stone-800 hover:border-[#FF2FA0] text-stone-300 hover:text-white flex items-center justify-center transition-colors"
+                className="w-11 h-11 rounded-full border border-[#FF8AD8]/15 bg-[#160A12] text-stone-300 hover:text-white hover:border-[#FF2FA0]/45 flex items-center justify-center"
                 aria-label="Próximo depoimento"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -89,33 +86,28 @@ export const TestimonialsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Mini cards preview below */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 max-w-5xl mx-auto">
-          {testimonials.map((t, idx) => (
-            <div
-              key={t.id}
-              onClick={() => setCurrentIndex(idx)}
-              className={`p-4 rounded-xl cursor-pointer transition-all border ${
-                currentIndex === idx
-                  ? 'bg-[#1A0A12] border-[#FF2FA0] shadow-md shadow-[#FF2FA0]/20'
-                  : 'bg-[#1A0A12]/50 border-stone-800/80 hover:border-stone-700'
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+          {testimonials.map((testimonial, index) => (
+            <button
+              key={testimonial.id}
+              type="button"
+              onClick={() => setCurrentIndex(index)}
+              className={`text-left rounded-2xl border p-4 transition-all ${
+                index === currentIndex
+                  ? 'border-[#FF2FA0]/45 bg-[#1A0A12]'
+                  : 'border-[#FF8AD8]/10 bg-[#160A12]/70 hover:border-[#FF2FA0]/25'
               }`}
             >
-              <div className="flex items-center gap-1 mb-2">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-[#FF2FA0] text-[#FF2FA0]" />
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, starIndex) => (
+                  <Star key={starIndex} className="w-3 h-3 fill-[#FF2FA0] text-[#FF2FA0]" />
                 ))}
               </div>
-              <p className="text-xs text-stone-300 line-clamp-2 italic mb-2">
-                "{t.text}"
-              </p>
-              <p className="text-[11px] font-medium text-white truncate">
-                {t.name}
-              </p>
-            </div>
+              <p className="mt-3 text-xs text-stone-300 line-clamp-3 italic">“{testimonial.text}”</p>
+              <p className="mt-3 text-[11px] font-semibold text-white">{testimonial.name}</p>
+            </button>
           ))}
         </div>
-
       </div>
     </section>
   );
