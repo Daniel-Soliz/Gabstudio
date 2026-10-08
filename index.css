@@ -1703,3 +1703,90 @@ footer {
     min-height: 176px;
   }
 }
+
+
+/* Mobile-first refinements – placed last to override desktop reference rules. */
+@media (max-width: 1100px) {
+  .gs-header-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: 78px;
+    padding-inline: 20px;
+    gap: 12px;
+  }
+  .gs-desktop-nav { display: none; }
+  .gs-mobile-toggle { display: inline-flex; flex: 0 0 auto; }
+  .gs-mobile-menu { display: block; max-height: calc(100dvh - 78px); overflow-y: auto; }
+  .gs-header-actions { flex: 0 0 auto; }
+  .gs-brand { min-width: 0; }
+  .gs-brand-mark { width: 48px; height: 40px; }
+  .gs-brand-name { font-size: 1.9rem; }
+  .gs-brand-subtitle { font-size: .52rem; letter-spacing: .11em; }
+  .gs-admin-heart { display: none; }
+  .gs-main-shell { padding-top: 79px; }
+  .gs-home-container { padding: 20px 20px 36px; }
+  .gs-home-grid { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 0; gap: 18px; }
+  .gs-hero { min-height: 550px; }
+  .gs-hero-content { left: clamp(20px, 4vw, 38px); right: clamp(20px, 4vw, 38px); bottom: 30px; }
+  .gs-hero-title { font-size: clamp(3.2rem, 8vw, 5.2rem); }
+  .gs-home-actions { grid-template-rows: auto auto; gap: 16px; }
+  .gs-booking-card { min-height: 215px; }
+  .gs-secondary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; gap: 14px; }
+  .gs-feature-card { min-height: 205px; }
+}
+@media (max-width: 760px) {
+  .gs-header-inner { min-height: 70px; padding-inline: 14px; gap: 6px; }
+  .gs-brand { gap: 6px; }
+  .gs-brand-mark { width: 40px; height: 34px; }
+  .gs-brand-name { font-size: clamp(1.45rem, 6vw, 1.8rem); white-space: nowrap; }
+  .gs-brand-subtitle { font-size: .48rem; max-width: 170px; margin-top: 5px; letter-spacing: .06em; }
+  .gs-header-actions { gap: 7px; }
+  .gs-header-actions .gs-reservation-btn { display: none; }
+  .gs-header-actions .gs-btn-primary { min-width: 0; min-height: 42px; padding: 0 12px; font-size: .75rem; }
+  .gs-mobile-toggle { width: 42px; height: 42px; }
+  .gs-mobile-menu { max-height: calc(100dvh - 70px); padding: 12px 14px 18px; }
+  .gs-mobile-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gs-mobile-menu-item { font-size: .72rem; min-width: 0; letter-spacing: 0; }
+  .gs-mobile-menu-actions .gs-btn { min-width: 0; width: 100%; padding-inline: 8px; white-space: normal; }
+  .gs-main-shell { padding-top: 71px; }
+  .gs-home-container { padding: 14px 12px 32px; }
+  .gs-home-grid { gap: 12px; }
+  .gs-hero { min-height: clamp(440px, 120vw, 530px); border-radius: 20px; }
+  .gs-hero-content { left: 20px; right: 20px; bottom: 24px; }
+  .gs-hero-title { font-size: clamp(2.8rem, 12.5vw, 4.1rem); line-height: .91; overflow-wrap: break-word; }
+  .gs-hero-kicker { font-size: .67rem; letter-spacing: .12em; line-height: 1.45; }
+  .gs-hero-divider { margin: 17px 0 15px; }
+  .gs-hero-cta { width: 100%; min-height: 50px; justify-content: center; padding-inline: 12px; font-size: .85rem; }
+  .gs-home-actions { gap: 12px; }
+  .gs-booking-card { min-height: 190px; padding: 20px; border-radius: 20px; gap: 12px; }
+  .gs-booking-decoration { width: 45%; height: 100px; right: 12px; }
+  .gs-card-icon { width: 48px; height: 48px; }
+  .gs-booking-copy h2 { font-size: clamp(2.1rem, 9vw, 2.8rem); margin-top: 13px; line-height: 1; }
+  .gs-booking-copy p { font-size: .89rem; }
+  .gs-booking-card .gs-card-arrow-filled { width: 40px; height: 40px; margin-bottom: 0; }
+  .gs-secondary-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .gs-feature-card { min-height: 166px; padding: 20px; border-radius: 20px; }
+  .gs-feature-card .gs-card-icon { width: 46px; height: 46px; }
+  .gs-feature-copy { padding-top: 16px; padding-right: 48px; }
+  .gs-feature-copy h2 { font-size: clamp(1.85rem, 8vw, 2.25rem); }
+  .gs-feature-copy p { font-size: .85rem; line-height: 1.45; }
+  .gs-gallery-polaroids { right: 14px; top: 12px; transform: scale(.7); transform-origin: top right; }
+  .gs-feature-card .gs-card-arrow { right: 15px; bottom: 16px; width: 36px; height: 36px; }
+  .gs-quote-decoration { font-size: 5rem; }
+  .gs-home, .gs-home-container, .gs-home-grid, .gs-home-actions { min-width: 0; }
+}
+@media (max-width: 390px) {
+  .gs-brand-mark { width: 34px; }
+  .gs-brand-name { font-size: 1.42rem; }
+  .gs-brand-subtitle { display: none; }
+  .gs-header-actions .gs-btn-primary { width: 42px; padding: 0; }
+  .gs-header-actions .gs-btn-primary span { display: none; }
+  .gs-hero-title { font-size: clamp(2.65rem, 12vw, 3.1rem); }
+  .gs-mobile-menu-grid, .gs-mobile-menu-actions { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  /* Keep page sections and booking forms inside the viewport. */
+  main, main section, main article { max-width: 100%; }
+  main h1, main h2, main h3, main p { overflow-wrap: break-word; }
+  input, select, textarea { max-width: 100%; font-size: 16px; }
+  button, a { touch-action: manipulation; }
+}
