@@ -180,7 +180,7 @@ function HomePage({
 
               <div className="gs-booking-copy">
                 <h2>Agendar horário</h2>
-                <p>Escolha técnica, data e horário.</p>
+                <p>Escolha seu atendimento e reserve seu momento.</p>
               </div>
 
               <span className="gs-card-arrow gs-card-arrow-filled" aria-hidden="true">
@@ -188,43 +188,18 @@ function HomePage({
               </span>
             </button>
 
-            <div className="gs-secondary-grid">
-              {cards.map(({ title, text, icon: Icon, page }) => (
-                <button
-                  key={title}
-                  type="button"
-                  onClick={() => onNavigate(page)}
-                  className={`gs-feature-card gs-feature-card-${page}`}
-                >
-                  <div className="gs-card-icon">
-                    <Icon className="w-5 h-5" />
-                  </div>
-
-                  {page === 'galeria' && (
-                    <div className="gs-gallery-polaroids" aria-hidden="true">
-                      <span className="gs-polaroid gs-polaroid-one">
-                        <img src={ASSETS.foxEyes} alt="" />
-                      </span>
-                      <span className="gs-polaroid gs-polaroid-two">
-                        <img src={ASSETS.russianVolume} alt="" />
-                      </span>
-                    </div>
-                  )}
-
-                  {page === 'depoimentos' && (
-                    <div className="gs-quote-decoration" aria-hidden="true">“</div>
-                  )}
-
-                  <div className="gs-feature-copy">
-                    <h2>{title}</h2>
-                    <p>{text}</p>
-                  </div>
-
-                  <span className="gs-card-arrow" aria-hidden="true">
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </button>
-              ))}
+            <div className="gs-booking-guide">
+              <p className="gs-guide-eyebrow">SEU MOMENTO DE CUIDADO</p>
+              <h2>Agende com facilidade</h2>
+              <p>Seu próximo olhar começa aqui. Em poucos passos, escolha o procedimento e o melhor horário para você.</p>
+              <div className="gs-guide-steps" aria-label="Como agendar">
+                <span><strong>01</strong> Procedimento</span>
+                <span><strong>02</strong> Data e horário</span>
+                <span><strong>03</strong> Confirmação</span>
+              </div>
+              <button type="button" onClick={onOpenBooking} className="gs-guide-button">
+                Escolher meu horário <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>
