@@ -70,13 +70,13 @@ export const AppointmentLookupModal: React.FC<AppointmentLookupModalProps> = ({ 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
       <div
-        className="relative w-full max-w-lg bg-[#140810] border border-[#FF2FA0]/40 rounded-3xl shadow-2xl overflow-hidden p-6 space-y-6"
+        className="relative w-full max-w-lg bg-[#231D27] border border-[#E5488C]/40 rounded-3xl shadow-2xl overflow-hidden p-6 space-y-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-stone-800">
           <div className="flex items-center gap-2">
-            <LashIcon className="w-5 h-5 text-[#FF8AD8]" />
+            <LashIcon className="w-5 h-5 text-[#EB7AAC]" />
             <h3 className="font-display text-lg text-white font-medium">
               Consultar Minha Reserva
             </h3>
@@ -100,11 +100,11 @@ export const AppointmentLookupModal: React.FC<AppointmentLookupModalProps> = ({ 
               placeholder="GAB-8491 ou (11) 99999-9999"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="flex-1 bg-[#1A0A12] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none"
+              className="flex-1 bg-[#27212B] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none"
             />
             <button
               type="submit"
-              className="px-5 py-2.5 rounded-xl bg-[#FF2FA0] hover:bg-[#FF8AD8] text-white text-xs font-medium flex items-center gap-1.5 transition-colors"
+              className="px-5 py-2.5 rounded-xl bg-[#E5488C] hover:bg-[#EB7AAC] text-white text-xs font-medium flex items-center gap-1.5 transition-colors"
             >
               <Search className="w-3.5 h-3.5" />
               <span>Buscar</span>
@@ -121,7 +121,7 @@ export const AppointmentLookupModal: React.FC<AppointmentLookupModalProps> = ({ 
 
         {/* Result */}
         {foundAppointment && (
-          <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800 space-y-4">
+          <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800 space-y-4">
             <div className="flex justify-between items-center pb-3 border-b border-stone-800">
               <div>
                 <span className="text-[10px] uppercase text-stone-400 block">Código</span>
@@ -157,7 +157,7 @@ export const AppointmentLookupModal: React.FC<AppointmentLookupModalProps> = ({ 
               </div>
               <div className="flex justify-between">
                 <span className="text-stone-400">Sinal Pago:</span>
-                <span className="text-[#FF8AD8] font-medium">
+                <span className="text-[#EB7AAC] font-medium">
                   R$ {foundAppointment.depositAmount.toFixed(2).replace('.', ',')}
                 </span>
               </div>

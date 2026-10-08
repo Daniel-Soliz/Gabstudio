@@ -175,17 +175,17 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
       <div 
-        className="relative w-full max-w-6xl bg-[#0D0509] border border-[#FF2FA0]/40 rounded-3xl shadow-2xl overflow-hidden flex flex-col h-[94vh]"
+        className="relative w-full max-w-6xl bg-[#1A171E] border border-[#E5488C]/40 rounded-3xl shadow-2xl overflow-hidden flex flex-col h-[94vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Header */}
-        <div className="px-6 py-3.5 bg-[#1A0A12] border-b border-stone-800 flex items-center justify-between">
+        <div className="px-6 py-3.5 bg-[#27212B] border-b border-stone-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Shield className="w-5 h-5 text-[#FF2FA0]" />
+            <Shield className="w-5 h-5 text-[#E5488C]" />
             <div>
               <h2 className="font-display text-white text-base sm:text-lg font-medium flex items-center gap-2">
                 <span>Painel de Controle Gab Studio</span>
-                <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#FF2FA0]/20 text-[#FF8AD8] border border-[#FF2FA0]/30 font-sans">
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#E5488C]/20 text-[#EB7AAC] border border-[#E5488C]/30 font-sans">
                   Área da Gab
                 </span>
               </h2>
@@ -201,7 +201,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   title="Testar som de notificação"
                   className="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-300 hover:text-white text-xs flex items-center gap-1.5 transition-colors"
                 >
-                  <Bell className="w-3.5 h-3.5 text-[#FF2FA0]" />
+                  <Bell className="w-3.5 h-3.5 text-[#E5488C]" />
                   <span className="hidden sm:inline">Som Alerta</span>
                 </button>
                 <button
@@ -227,10 +227,10 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
         {/* Not Authenticated View */}
         {!isAuthenticated ? (
           <div className="flex-1 flex items-center justify-center p-6">
-            <div className="w-full max-w-md bg-[#1A0A12] rounded-3xl border border-[#FF2FA0]/30 p-8 shadow-2xl space-y-6">
+            <div className="w-full max-w-md bg-[#27212B] rounded-3xl border border-[#E5488C]/30 p-8 shadow-2xl space-y-6">
               <div className="text-center space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#FF2FA0]/15 text-[#FF8AD8] flex items-center justify-center mx-auto mb-2">
-                  <Shield className="w-7 h-7 text-[#FF2FA0]" />
+                <div className="w-14 h-14 rounded-full bg-[#E5488C]/15 text-[#EB7AAC] flex items-center justify-center mx-auto mb-2">
+                  <Shield className="w-7 h-7 text-[#E5488C]" />
                 </div>
                 <h3 className="font-display text-2xl text-white font-medium">
                   Login da Gab Santos
@@ -255,7 +255,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                     type="email"
                     value={authEmail}
                     onChange={(e) => setAuthEmail(e.target.value)}
-                    className="w-full bg-[#0D0509] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none"
+                    className="w-full bg-[#1A171E] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none"
                     required
                   />
                 </div>
@@ -268,7 +268,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                     type="password"
                     value={authPassword}
                     onChange={(e) => setAuthPassword(e.target.value)}
-                    className="w-full bg-[#0D0509] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none"
+                    className="w-full bg-[#1A171E] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none"
                     required
                   />
                 </div>
@@ -282,7 +282,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   type="submit"
                   className="w-full neon-button py-3 rounded-xl text-white text-sm font-medium flex items-center justify-center gap-2 transition-transform"
                 >
-                  <Shield className="w-4 h-4 text-[#FF8AD8]" />
+                  <Shield className="w-4 h-4 text-[#EB7AAC]" />
                   <span>Acessar Painel da Gab</span>
                 </button>
               </form>
@@ -292,12 +292,12 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
           /* Authenticated Dashboard */
           <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
             {/* Sidebar Navigation */}
-            <aside className="w-full md:w-60 bg-[#1A0A12]/95 border-r border-stone-800/80 p-3 sm:p-4 flex md:flex-col gap-1 overflow-x-auto md:overflow-x-visible shrink-0">
+            <aside className="w-full md:w-60 bg-[#27212B]/95 border-r border-stone-800/80 p-3 sm:p-4 flex md:flex-col gap-1 overflow-x-auto md:overflow-x-visible shrink-0">
               <button
                 onClick={() => setActiveTab('dashboard')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'dashboard'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -309,7 +309,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('agenda')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'agenda'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -321,7 +321,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('agendamentos')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'agendamentos'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -333,11 +333,11 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('novo')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'novo'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
-                <PlusCircle className="w-4 h-4 text-[#FF8AD8]" />
+                <PlusCircle className="w-4 h-4 text-[#EB7AAC]" />
                 <span>Novo Agendamento</span>
               </button>
 
@@ -345,7 +345,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('servicos')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'servicos'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -357,7 +357,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('disponibilidade')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'disponibilidade'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -369,7 +369,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('clientes')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'clientes'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -381,7 +381,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('financeiro')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'financeiro'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -393,7 +393,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('config')}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === 'config'
-                    ? 'bg-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
+                    ? 'bg-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
                     : 'text-stone-300 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -403,14 +403,14 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
             </aside>
 
             {/* Main Admin Area */}
-            <main className="flex-1 overflow-y-auto p-4 sm:p-6 bg-[#0D0509]">
+            <main className="flex-1 overflow-y-auto p-4 sm:p-6 bg-[#1A171E]">
               
               {/* TAB 1: DASHBOARD */}
               {activeTab === 'dashboard' && (
                 <div className="space-y-6">
                   {/* Top Stats Cards */}
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800">
                       <span className="text-[11px] uppercase tracking-wider text-stone-400 block">
                         Atendimentos Hoje
                       </span>
@@ -420,7 +420,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       <span className="text-[11px] text-stone-400">Na agenda para hoje</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800">
                       <span className="text-[11px] uppercase tracking-wider text-stone-400 block">
                         Atendimentos na Semana
                       </span>
@@ -430,8 +430,8 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       <span className="text-[11px] text-stone-400">Total desta semana</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800">
-                      <span className="text-[11px] uppercase tracking-wider text-[#FF8AD8] block font-medium">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800">
+                      <span className="text-[11px] uppercase tracking-wider text-[#EB7AAC] block font-medium">
                         Faturamento do Dia
                       </span>
                       <p className="font-display text-2xl text-white font-bold mt-1 tabular-nums">
@@ -440,11 +440,11 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       <span className="text-[11px] text-stone-400">Sinais + pagamentos</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-[#FF2FA0]/30">
-                      <span className="text-[11px] uppercase tracking-wider text-[#FF8AD8] block font-medium">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-[#E5488C]/30">
+                      <span className="text-[11px] uppercase tracking-wider text-[#EB7AAC] block font-medium">
                         Faturamento do Mês
                       </span>
-                      <p className="font-display text-2xl text-[#FF8AD8] font-bold mt-1 tabular-nums">
+                      <p className="font-display text-2xl text-[#EB7AAC] font-bold mt-1 tabular-nums">
                         R$ {metrics.revenueMonth.toFixed(2).replace('.', ',')}
                       </p>
                       <span className="text-[11px] text-stone-400">Acumulado do mês atual</span>
@@ -452,15 +452,15 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   </div>
 
                   {/* Highlight: Today's Appointments */}
-                  <div className="p-5 rounded-3xl bg-[#1A0A12] border border-[#FF2FA0]/40 space-y-4">
+                  <div className="p-5 rounded-3xl bg-[#27212B] border border-[#E5488C]/40 space-y-4">
                     <div className="flex items-center justify-between pb-3 border-b border-stone-800">
                       <div className="flex items-center gap-2">
-                        <Clock className="w-5 h-5 text-[#FF2FA0]" />
+                        <Clock className="w-5 h-5 text-[#E5488C]" />
                         <h3 className="font-display text-lg text-white font-medium">
                           Agendamentos de Hoje ({todayStr})
                         </h3>
                       </div>
-                      <span className="text-xs text-[#FF8AD8] font-medium">
+                      <span className="text-xs text-[#EB7AAC] font-medium">
                         {todayAppointments.length} agendamento(s)
                       </span>
                     </div>
@@ -474,10 +474,10 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         {todayAppointments.map((apt) => (
                           <div
                             key={apt.id}
-                            className="p-4 rounded-2xl bg-[#0D0509] border border-stone-800 hover:border-[#FF2FA0]/50 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                            className="p-4 rounded-2xl bg-[#1A171E] border border-stone-800 hover:border-[#E5488C]/50 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4"
                           >
                             <div className="flex items-start gap-3">
-                              <div className="w-12 h-12 rounded-xl bg-[#FF2FA0]/15 text-[#FF8AD8] flex flex-col items-center justify-center shrink-0">
+                              <div className="w-12 h-12 rounded-xl bg-[#E5488C]/15 text-[#EB7AAC] flex flex-col items-center justify-center shrink-0">
                                 <span className="font-display text-sm font-bold tabular-nums">{apt.time}</span>
                                 <span className="text-[9px] uppercase">{apt.durationMinutes}m</span>
                               </div>
@@ -486,7 +486,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                                   <h4 className="font-display text-white text-base font-medium">
                                     {apt.clientName}
                                   </h4>
-                                  <span className="text-[10px] font-mono text-[#FF8AD8]">({apt.id})</span>
+                                  <span className="text-[10px] font-mono text-[#EB7AAC]">({apt.id})</span>
                                 </div>
                                 <p className="text-xs text-stone-300 font-light mt-0.5">
                                   {apt.serviceName} · Total: R$ {apt.price} (Sinal R$ {apt.depositAmount})
@@ -534,7 +534,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 <div className="space-y-6">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-800">
                     <div className="flex items-center gap-3">
-                      <CalendarIcon className="w-5 h-5 text-[#FF2FA0]" />
+                      <CalendarIcon className="w-5 h-5 text-[#E5488C]" />
                       <h3 className="font-display text-lg text-white font-medium">
                         Agenda do Estúdio
                       </h3>
@@ -542,15 +542,15 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         type="date"
                         value={agendaCurrentDate}
                         onChange={(e) => setAgendaCurrentDate(e.target.value)}
-                        className="bg-[#1A0A12] border border-stone-800 rounded-lg px-3 py-1 text-xs text-white"
+                        className="bg-[#27212B] border border-stone-800 rounded-lg px-3 py-1 text-xs text-white"
                       />
                     </div>
 
-                    <div className="flex items-center gap-2 bg-[#1A0A12] p-1 rounded-xl border border-stone-800">
+                    <div className="flex items-center gap-2 bg-[#27212B] p-1 rounded-xl border border-stone-800">
                       <button
                         onClick={() => setAgendaViewMode('dia')}
                         className={`px-3 py-1 rounded-lg text-xs font-medium ${
-                          agendaViewMode === 'dia' ? 'bg-[#FF2FA0] text-white' : 'text-stone-400'
+                          agendaViewMode === 'dia' ? 'bg-[#E5488C] text-white' : 'text-stone-400'
                         }`}
                       >
                         Visão Dia
@@ -558,7 +558,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       <button
                         onClick={() => setAgendaViewMode('semana')}
                         className={`px-3 py-1 rounded-lg text-xs font-medium ${
-                          agendaViewMode === 'semana' ? 'bg-[#FF2FA0] text-white' : 'text-stone-400'
+                          agendaViewMode === 'semana' ? 'bg-[#E5488C] text-white' : 'text-stone-400'
                         }`}
                       >
                         Visão Semana
@@ -573,7 +573,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         Atendimentos em {agendaCurrentDate}
                       </h4>
                       {appointments.filter(a => a.date === agendaCurrentDate && a.status !== 'cancelado').length === 0 ? (
-                        <div className="py-12 text-center text-stone-400 text-xs bg-[#1A0A12] rounded-2xl border border-stone-800">
+                        <div className="py-12 text-center text-stone-400 text-xs bg-[#27212B] rounded-2xl border border-stone-800">
                           Nenhum agendamento neste dia.
                         </div>
                       ) : (
@@ -583,10 +583,10 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           .map(apt => (
                             <div
                               key={apt.id}
-                              className="p-4 rounded-xl bg-[#1A0A12] border border-stone-800 flex items-center justify-between"
+                              className="p-4 rounded-xl bg-[#27212B] border border-stone-800 flex items-center justify-between"
                             >
                               <div>
-                                <span className="font-mono text-sm text-[#FF8AD8] font-bold mr-3">{apt.time}</span>
+                                <span className="font-mono text-sm text-[#EB7AAC] font-bold mr-3">{apt.time}</span>
                                 <strong className="text-white text-sm mr-2">{apt.clientName}</strong>
                                 <span className="text-xs text-stone-400">({apt.serviceName})</span>
                               </div>
@@ -608,8 +608,8 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   {agendaViewMode === 'semana' && (
                     <div className="grid grid-cols-1 md:grid-cols-6 gap-3">
                       {['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'].map((dayName, idx) => (
-                        <div key={dayName} className="p-3 rounded-2xl bg-[#1A0A12] border border-stone-800 min-h-[200px]">
-                          <span className="text-xs uppercase tracking-wider text-[#FF8AD8] font-medium block border-b border-stone-800 pb-1 mb-2">
+                        <div key={dayName} className="p-3 rounded-2xl bg-[#27212B] border border-stone-800 min-h-[200px]">
+                          <span className="text-xs uppercase tracking-wider text-[#EB7AAC] font-medium block border-b border-stone-800 pb-1 mb-2">
                             {dayName}
                           </span>
                           <div className="text-[11px] text-stone-400 space-y-1.5">
@@ -634,7 +634,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
               {activeTab === 'agendamentos' && (
                 <div className="space-y-4">
                   {/* Filters Bar */}
-                  <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800 flex flex-wrap items-center gap-3">
+                  <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800 flex flex-wrap items-center gap-3">
                     <div className="flex-1 min-w-[200px] relative">
                       <Search className="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
                       <input
@@ -642,14 +642,14 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         placeholder="Buscar por cliente, WhatsApp ou código..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-[#0D0509] border border-stone-800 focus:border-[#FF2FA0] rounded-xl pl-9 pr-3 py-2 text-xs text-white focus:outline-none"
+                        className="w-full bg-[#1A171E] border border-stone-800 focus:border-[#E5488C] rounded-xl pl-9 pr-3 py-2 text-xs text-white focus:outline-none"
                       />
                     </div>
 
                     <select
                       value={filterStatus}
                       onChange={(e) => setFilterStatus(e.target.value)}
-                      className="bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-xs text-white"
+                      className="bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-xs text-white"
                     >
                       <option value="todos">Todos os Status</option>
                       <option value="confirmado">Confirmado</option>
@@ -663,7 +663,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       type="date"
                       value={filterDate}
                       onChange={(e) => setFilterDate(e.target.value)}
-                      className="bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-xs text-white"
+                      className="bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-xs text-white"
                     />
 
                     {filterDate && (
@@ -677,10 +677,10 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   </div>
 
                   {/* Appointments Table */}
-                  <div className="bg-[#1A0A12] rounded-2xl border border-stone-800 overflow-hidden">
+                  <div className="bg-[#27212B] rounded-2xl border border-stone-800 overflow-hidden">
                     <div className="overflow-x-auto">
                       <table className="w-full text-left text-xs text-stone-300">
-                        <thead className="bg-[#0D0509] uppercase text-[10px] tracking-wider text-stone-400 border-b border-stone-800">
+                        <thead className="bg-[#1A171E] uppercase text-[10px] tracking-wider text-stone-400 border-b border-stone-800">
                           <tr>
                             <th className="px-4 py-3">Código / Cliente</th>
                             <th className="px-4 py-3">Data & Hora</th>
@@ -701,13 +701,13 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                             filteredAppointments.map((apt) => (
                               <tr key={apt.id} className="hover:bg-white/5 transition-colors">
                                 <td className="px-4 py-3">
-                                  <div className="font-mono text-[10px] text-[#FF8AD8] font-bold">{apt.id}</div>
+                                  <div className="font-mono text-[10px] text-[#EB7AAC] font-bold">{apt.id}</div>
                                   <div className="font-medium text-white text-sm">{apt.clientName}</div>
                                   <div className="text-[11px] text-stone-400">{apt.clientPhone}</div>
                                 </td>
                                 <td className="px-4 py-3">
                                   <div className="text-white font-medium">{apt.date}</div>
-                                  <div className="text-[#E6C280]">{apt.time} ({apt.durationMinutes}m)</div>
+                                  <div className="text-[#D977A3]">{apt.time} ({apt.durationMinutes}m)</div>
                                 </td>
                                 <td className="px-4 py-3 font-medium text-white">
                                   {apt.serviceName}
@@ -799,7 +799,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
 
               {/* TAB 4: NOVO AGENDAMENTO MANUAL */}
               {activeTab === 'novo' && (
-                <div className="max-w-2xl mx-auto bg-[#1A0A12] rounded-3xl border border-[#FF2FA0]/30 p-6 space-y-6">
+                <div className="max-w-2xl mx-auto bg-[#27212B] rounded-3xl border border-[#E5488C]/30 p-6 space-y-6">
                   <div>
                     <h3 className="font-display text-xl text-white font-medium">
                       Criar Agendamento Manual
@@ -827,7 +827,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           value={manualClientName}
                           onChange={(e) => setManualClientName(e.target.value)}
                           placeholder="Nome e Sobrenome"
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
                         />
                       </div>
 
@@ -841,7 +841,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           value={manualClientPhone}
                           onChange={(e) => setManualClientPhone(e.target.value)}
                           placeholder="(11) 99999-9999"
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
                         />
                       </div>
                     </div>
@@ -854,7 +854,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         required
                         value={manualServiceId}
                         onChange={(e) => setManualServiceId(e.target.value)}
-                        className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
+                        className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
                       >
                         <option value="">Selecione um procedimento</option>
                         {services.map((s) => (
@@ -875,7 +875,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           required
                           value={manualDate}
                           onChange={(e) => setManualDate(e.target.value)}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
                         />
                       </div>
 
@@ -888,7 +888,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           required
                           value={manualTime}
                           onChange={(e) => setManualTime(e.target.value)}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none"
                         />
                       </div>
                     </div>
@@ -901,7 +901,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         <select
                           value={manualPaymentMethod}
                           onChange={(e) => setManualPaymentMethod(e.target.value as 'dinheiro' | 'pix' | 'cartao_credito')}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white"
                         >
                           <option value="pix">Pix</option>
                           <option value="dinheiro">Dinheiro</option>
@@ -916,7 +916,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         <select
                           value={manualPaymentStatus}
                           onChange={(e) => setManualPaymentStatus(e.target.value as PaymentStatus)}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white"
                         >
                           <option value="pago">Pago Totalmente</option>
                           <option value="pendente">Sinal Pago (Pendente Restante)</option>
@@ -928,7 +928,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       type="submit"
                       className="w-full neon-button py-3 rounded-xl text-white text-xs sm:text-sm font-medium flex items-center justify-center gap-2 mt-4"
                     >
-                      <PlusCircle className="w-4 h-4 text-[#FF8AD8]" />
+                      <PlusCircle className="w-4 h-4 text-[#EB7AAC]" />
                       <span>Salvar e Inserir na Agenda</span>
                     </button>
                   </form>
@@ -961,7 +961,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                       })}
                       className="neon-button px-4 py-2 rounded-xl text-white text-xs font-medium flex items-center gap-1.5"
                     >
-                      <PlusCircle className="w-3.5 h-3.5 text-[#FF8AD8]" />
+                      <PlusCircle className="w-3.5 h-3.5 text-[#EB7AAC]" />
                       <span>Adicionar Procedimento</span>
                     </button>
                   </div>
@@ -971,14 +971,14 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                     {services.map((service) => (
                       <div
                         key={service.id}
-                        className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800 space-y-3"
+                        className="p-4 rounded-2xl bg-[#27212B] border border-stone-800 space-y-3"
                       >
                         <div className="flex items-start justify-between">
                           <div>
                             <span className="text-[10px] uppercase text-stone-400">{service.category}</span>
                             <h4 className="font-display text-white text-base font-medium">{service.name}</h4>
                           </div>
-                          <span className="font-display text-base text-[#FF8AD8] font-bold tabular-nums">
+                          <span className="font-display text-base text-[#EB7AAC] font-bold tabular-nums">
                             R$ {service.price.toFixed(2).replace('.', ',')}
                           </span>
                         </div>
@@ -995,7 +995,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                               onClick={() => setEditingService(service)}
                               className="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-300 text-xs flex items-center gap-1"
                             >
-                              <Edit3 className="w-3 h-3 text-[#FF2FA0]" />
+                              <Edit3 className="w-3 h-3 text-[#E5488C]" />
                               <span>Editar</span>
                             </button>
                             <button
@@ -1018,7 +1018,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   {/* Editing Modal */}
                   {editingService && (
                     <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-                      <div className="bg-[#1A0A12] border border-[#FF2FA0]/40 rounded-2xl p-6 max-w-lg w-full space-y-4">
+                      <div className="bg-[#27212B] border border-[#E5488C]/40 rounded-2xl p-6 max-w-lg w-full space-y-4">
                         <div className="flex justify-between items-center">
                           <h4 className="font-display text-white text-lg font-medium">Editar Serviço</h4>
                           <button onClick={() => setEditingService(null)} className="text-stone-400 hover:text-white">
@@ -1033,7 +1033,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                               type="text"
                               value={editingService.name}
                               onChange={(e) => setEditingService({ ...editingService, name: e.target.value })}
-                              className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                              className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                             />
                           </div>
 
@@ -1044,7 +1044,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                                 type="number"
                                 value={editingService.price}
                                 onChange={(e) => setEditingService({ ...editingService, price: Number(e.target.value) })}
-                                className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                                className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                               />
                             </div>
                             <div>
@@ -1053,7 +1053,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                                 type="number"
                                 value={editingService.durationMinutes}
                                 onChange={(e) => setEditingService({ ...editingService, durationMinutes: Number(e.target.value) })}
-                                className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                                className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                               />
                             </div>
                           </div>
@@ -1064,7 +1064,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                               rows={3}
                               value={editingService.description}
                               onChange={(e) => setEditingService({ ...editingService, description: e.target.value })}
-                              className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white resize-none"
+                              className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white resize-none"
                             />
                           </div>
                         </div>
@@ -1094,7 +1094,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
 
               {/* TAB 6: DISPONIBILIDADE & HORÁRIOS */}
               {activeTab === 'disponibilidade' && (
-                <div className="max-w-2xl mx-auto bg-[#1A0A12] rounded-3xl border border-stone-800 p-6 space-y-6">
+                <div className="max-w-2xl mx-auto bg-[#27212B] rounded-3xl border border-stone-800 p-6 space-y-6">
                   <div>
                     <h3 className="font-display text-xl text-white font-medium">
                       Horários de Atendimento & Folgas
@@ -1112,7 +1112,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           type="time"
                           value={settings.businessHoursStart}
                           onChange={(e) => setSettings({ ...settings, businessHoursStart: e.target.value })}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                         />
                       </div>
                       <div>
@@ -1121,7 +1121,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           type="time"
                           value={settings.businessHoursEnd}
                           onChange={(e) => setSettings({ ...settings, businessHoursEnd: e.target.value })}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                         />
                       </div>
                     </div>
@@ -1133,7 +1133,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           type="time"
                           value={settings.lunchBreakStart}
                           onChange={(e) => setSettings({ ...settings, lunchBreakStart: e.target.value })}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                         />
                       </div>
                       <div>
@@ -1142,7 +1142,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                           type="time"
                           value={settings.lunchBreakEnd}
                           onChange={(e) => setSettings({ ...settings, lunchBreakEnd: e.target.value })}
-                          className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-3 py-2 text-white"
+                          className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-3 py-2 text-white"
                         />
                       </div>
                     </div>
@@ -1172,8 +1172,8 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                               }}
                               className={`px-3 py-1.5 rounded-xl border text-xs transition-colors ${
                                 isOpen
-                                  ? 'bg-[#FF2FA0] border-[#FF2FA0] text-white font-medium'
-                                  : 'bg-[#0D0509] border-stone-800 text-stone-500'
+                                  ? 'bg-[#E5488C] border-[#E5488C] text-white font-medium'
+                                  : 'bg-[#1A171E] border-stone-800 text-stone-500'
                               }`}
                             >
                               {d.label}
@@ -1213,14 +1213,14 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {clients.length === 0 ? (
-                      <div className="col-span-3 py-12 text-center text-stone-400 text-xs bg-[#1A0A12] rounded-2xl border border-stone-800">
+                      <div className="col-span-3 py-12 text-center text-stone-400 text-xs bg-[#27212B] rounded-2xl border border-stone-800">
                         Nenhum cliente cadastrado ainda. Conforme as pessoas agendam, elas aparecem automaticamente aqui.
                       </div>
                     ) : (
                       clients.map((cli) => (
                         <div
                           key={cli.id}
-                          className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800 space-y-3"
+                          className="p-4 rounded-2xl bg-[#27212B] border border-stone-800 space-y-3"
                         >
                           <div className="flex items-start justify-between">
                             <div>
@@ -1250,7 +1250,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                             </div>
                             <div className="flex justify-between">
                               <span className="text-stone-400">Último atendimento:</span>
-                              <span className="text-[#FF8AD8]">{cli.lastVisitDate || 'Recente'}</span>
+                              <span className="text-[#EB7AAC]">{cli.lastVisitDate || 'Recente'}</span>
                             </div>
                             {cli.allergies && (
                               <p className="text-[11px] text-rose-300 italic pt-1">
@@ -1278,30 +1278,30 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800">
                       <span className="text-xs uppercase text-stone-400 block">Total Recebido Hoje</span>
                       <p className="font-display text-2xl text-white font-bold mt-1 tabular-nums">
                         R$ {metrics.revenueToday.toFixed(2).replace('.', ',')}
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800">
                       <span className="text-xs uppercase text-stone-400 block">Total Recebido na Semana</span>
                       <p className="font-display text-2xl text-white font-bold mt-1 tabular-nums">
                         R$ {metrics.revenueWeek.toFixed(2).replace('.', ',')}
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#1A0A12] border border-[#FF2FA0]/40">
-                      <span className="text-xs uppercase text-[#FF8AD8] block">Total Recebido no Mês</span>
-                      <p className="font-display text-2xl text-[#FF8AD8] font-bold mt-1 tabular-nums">
+                    <div className="p-4 rounded-2xl bg-[#27212B] border border-[#E5488C]/40">
+                      <span className="text-xs uppercase text-[#EB7AAC] block">Total Recebido no Mês</span>
+                      <p className="font-display text-2xl text-[#EB7AAC] font-bold mt-1 tabular-nums">
                         R$ {metrics.revenueMonth.toFixed(2).replace('.', ',')}
                       </p>
                     </div>
                   </div>
 
                   {/* Payments list */}
-                  <div className="bg-[#1A0A12] rounded-2xl border border-stone-800 p-4 space-y-3">
+                  <div className="bg-[#27212B] rounded-2xl border border-stone-800 p-4 space-y-3">
                     <h4 className="text-xs uppercase tracking-wider text-stone-400 font-medium">
                       Histórico Recente de Entradas
                     </h4>
@@ -1327,7 +1327,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
 
               {/* TAB 9: CONFIGURAÇÕES */}
               {activeTab === 'config' && (
-                <div className="max-w-2xl mx-auto bg-[#1A0A12] rounded-3xl border border-stone-800 p-6 space-y-6">
+                <div className="max-w-2xl mx-auto bg-[#27212B] rounded-3xl border border-stone-800 p-6 space-y-6">
                   <div>
                     <h3 className="font-display text-xl text-white font-medium">
                       Configurações do Estúdio
@@ -1346,7 +1346,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         max={100}
                         value={settings.depositPercentage}
                         onChange={(e) => setSettings({ ...settings, depositPercentage: Number(e.target.value) })}
-                        className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
+                        className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
                       />
                       <span className="text-[11px] text-stone-400 mt-1 block">
                         Padrão: 30%. O cliente paga este valor para reservar a vaga.
@@ -1361,7 +1361,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         max={72}
                         value={settings.cancellationHoursLimit}
                         onChange={(e) => setSettings({ ...settings, cancellationHoursLimit: Number(e.target.value) })}
-                        className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
+                        className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
                       />
                       <span className="text-[11px] text-stone-400 mt-1 block">
                         Padrão: 24 horas antes do horário agendado.
@@ -1374,7 +1374,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         type="text"
                         value={settings.studioWhatsapp}
                         onChange={(e) => setSettings({ ...settings, studioWhatsapp: e.target.value })}
-                        className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
+                        className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
                       />
                     </div>
 
@@ -1384,7 +1384,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         type="text"
                         value={settings.studioInstagram}
                         onChange={(e) => setSettings({ ...settings, studioInstagram: e.target.value })}
-                        className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
+                        className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
                       />
                     </div>
 
@@ -1394,7 +1394,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                         type="text"
                         value={settings.studioAddress}
                         onChange={(e) => setSettings({ ...settings, studioAddress: e.target.value })}
-                        className="w-full bg-[#0D0509] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
+                        className="w-full bg-[#1A171E] border border-stone-800 rounded-xl px-4 py-2.5 text-white"
                       />
                     </div>
 

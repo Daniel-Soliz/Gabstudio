@@ -33,22 +33,22 @@ export const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="relative py-24 bg-[#140810] border-t border-[#FF2FA0]/15">
+    <section id="faq" className="relative py-24 bg-[#231D27] border-t border-[#E5488C]/15">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#FF8AD8]">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF2FA0]" />
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#EB7AAC]">
+            <Sparkles className="w-3.5 h-3.5 text-[#E5488C]" />
             <span className="font-serif-luxury">Tire Suas Dúvidas</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-white font-normal">
-            Perguntas <span className="text-[#FF8AD8] italic">Frequentes</span>
+            Perguntas <span className="text-[#EB7AAC] italic">Frequentes</span>
           </h2>
           <p className="font-sans-clean text-stone-400 text-sm font-light">
             Esclareça os principais pontos sobre o procedimento, durabilidade e cuidados.
           </p>
-          <div className="flex justify-center pt-1 text-[#FF2FA0]/40">
+          <div className="flex justify-center pt-1 text-[#E5488C]/40">
             <VintageFlourish className="w-36 h-5" />
           </div>
         </div>
@@ -60,22 +60,22 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-[#1A0A12] rounded-2xl border border-stone-800 transition-colors overflow-hidden"
+                className="bg-[#27212B] rounded-2xl border border-stone-800 transition-colors overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 hover:text-[#FF8AD8] transition-colors focus:outline-none"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 hover:text-[#EB7AAC] transition-colors focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3">
-                    <HelpCircle className="w-4 h-4 text-[#FF2FA0] shrink-0 opacity-70" />
+                    <HelpCircle className="w-4 h-4 text-[#E5488C] shrink-0 opacity-70" />
                     <span className="font-display text-sm sm:text-base text-white font-medium">
                       {faq.question}
                     </span>
                   </div>
                   <ChevronDown
                     className={`w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 text-[#FF2FA0]' : ''
+                      isOpen ? 'rotate-180 text-[#E5488C]' : ''
                     }`}
                   />
                 </button>

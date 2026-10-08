@@ -37,22 +37,22 @@ export const AftercareSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-[#0D0509]">
+    <section className="relative py-24 bg-[#1A171E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#FF8AD8]">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF2FA0]" />
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#EB7AAC]">
+            <Sparkles className="w-3.5 h-3.5 text-[#E5488C]" />
             <span className="font-serif-luxury">Guia de Retenção</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-white font-normal">
-            Cuidados <span className="text-[#FF8AD8] italic">Pós-Aplicação</span>
+            Cuidados <span className="text-[#EB7AAC] italic">Pós-Aplicação</span>
           </h2>
           <p className="font-sans-clean text-stone-400 text-sm font-light">
             Pequenos hábitos diários garantem que seus cílios durem perfeitos por muito mais tempo.
           </p>
-          <div className="flex justify-center pt-1 text-[#FF2FA0]/40">
+          <div className="flex justify-center pt-1 text-[#E5488C]/40">
             <VintageFlourish className="w-36 h-5" />
           </div>
         </div>
@@ -64,10 +64,10 @@ export const AftercareSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-[#1A0A12]/80 rounded-2xl border border-stone-800 p-6 flex flex-col justify-between hover:border-[#FF2FA0]/40 transition-colors"
+                className="bg-[#27212B]/80 rounded-2xl border border-stone-800 p-6 flex flex-col justify-between hover:border-[#E5488C]/40 transition-colors"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#FF2FA0]/15 text-[#FF8AD8] flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#E5488C]/15 text-[#EB7AAC] flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="font-display text-lg text-white font-medium mb-2">

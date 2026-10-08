@@ -23,7 +23,7 @@ export const FloatingWhatsapp: React.FC = () => {
         <MessageCircle className="w-7 h-7 fill-white text-white drop-shadow-md" />
 
         {/* Tooltip on hover */}
-        <span className="absolute right-16 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-[#1A0A12] border border-[#25D366]/50 text-white text-xs font-medium whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none hidden sm:block">
+        <span className="absolute right-16 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-[#27212B] border border-[#25D366]/50 text-white text-xs font-medium whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none hidden sm:block">
           Falar com a Gab no WhatsApp
         </span>
       </a>

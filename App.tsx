@@ -67,17 +67,17 @@ class PageErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-12 bg-[#F8F3EC]">
-          <div className="w-full max-w-xl rounded-[28px] border border-[#D9C3AE] bg-[#FFF9F3] p-7 sm:p-9 text-center">
-            <Eye className="w-10 h-10 text-[#B86F4C] mx-auto" />
-            <h1 className="font-display text-3xl text-[#30231F] mt-4">Esta área está sendo atualizada</h1>
-            <p className="text-sm text-[#78665D] mt-3 leading-relaxed">
+        <section className="min-h-[60vh] flex items-center justify-center px-4 py-12 bg-[#1A171E]">
+          <div className="w-full max-w-xl rounded-[28px] border border-[#55404F] bg-[#27212B] p-7 sm:p-9 text-center">
+            <Eye className="w-10 h-10 text-[#E5488C] mx-auto" />
+            <h1 className="font-display text-3xl text-[#F7EDF3] mt-4">Esta área está sendo atualizada</h1>
+            <p className="text-sm text-[#C7B3C1] mt-3 leading-relaxed">
               O restante do site continua disponível. Volte ao início e escolha outra opção.
             </p>
             <button
               type="button"
               onClick={this.props.onHome}
-              className="mt-6 min-h-[46px] px-6 rounded-[14px] bg-[#B86F4C] text-[#FFF9F3] font-semibold text-sm hover:bg-[#3B2923] transition-colors"
+              className="mt-6 min-h-[46px] px-6 rounded-[14px] bg-[#E5488C] text-[#27212B] font-semibold text-sm hover:bg-[#F06FA6] transition-colors"
             >
               Voltar ao início
             </button>
@@ -107,7 +107,7 @@ const PageShell: React.FC<PageShellProps> = ({
   onOpenAdmin,
   onOpenLookup,
 }) => (
-  <div className="min-h-screen bg-[#F8F3EC] text-[#30231F] font-sans-clean">
+  <div className="min-h-screen bg-[#1A171E] text-[#F7EDF3] font-sans-clean">
     <Navbar
       activePage={activePage}
       onNavigate={onNavigate}

@@ -24,22 +24,22 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
   const instagramLink = `https://instagram.com/${settings.studioInstagram.replace('@', '')}`;
 
   return (
-    <section id="contato" className="relative py-24 bg-[#0D0509]">
+    <section id="contato" className="relative py-24 bg-[#1A171E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#FF8AD8]">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF2FA0]" />
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#EB7AAC]">
+            <Sparkles className="w-3.5 h-3.5 text-[#E5488C]" />
             <span className="font-serif-luxury">Localização & Contato</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-white font-normal">
-            Visite Nosso <span className="text-[#FF8AD8] italic">Estúdio</span>
+            Visite Nosso <span className="text-[#EB7AAC] italic">Estúdio</span>
           </h2>
           <p className="font-sans-clean text-stone-400 text-sm font-light">
             Localizado no coração da Zona Norte de São Paulo, em ponto nobre e de fácil acesso com estacionamento próximo.
           </p>
-          <div className="flex justify-center pt-1 text-[#FF2FA0]/40">
+          <div className="flex justify-center pt-1 text-[#E5488C]/40">
             <VintageFlourish className="w-36 h-5" />
           </div>
         </div>
@@ -48,7 +48,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Contact Details Card */}
-          <div className="lg:col-span-5 bg-[#1A0A12] rounded-3xl border border-stone-800 p-8 space-y-6">
+          <div className="lg:col-span-5 bg-[#27212B] rounded-3xl border border-stone-800 p-8 space-y-6">
             <h3 className="font-display text-2xl text-white font-medium">
               Informações do Estúdio
             </h3>
@@ -56,8 +56,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
             <div className="space-y-5 text-stone-300 text-sm font-light">
               {/* Address */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#FF2FA0]/15 text-[#FF8AD8] flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-[#FF2FA0]" />
+                <div className="w-10 h-10 rounded-xl bg-[#E5488C]/15 text-[#EB7AAC] flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-[#E5488C]" />
                 </div>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-stone-400 block font-normal">
@@ -74,8 +74,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
 
               {/* Hours */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#FF2FA0]/15 text-[#FF8AD8] flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 text-[#FF2FA0]" />
+                <div className="w-10 h-10 rounded-xl bg-[#E5488C]/15 text-[#EB7AAC] flex items-center justify-center shrink-0">
+                  <Clock className="w-5 h-5 text-[#E5488C]" />
                 </div>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-stone-400 block font-normal">
@@ -109,7 +109,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
                 rel="noopener noreferrer"
                 className="w-full py-3 px-4 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-200 border border-stone-800 text-sm font-medium flex items-center justify-center gap-2.5 transition-colors"
               >
-                <Instagram className="w-4 h-4 text-[#FF2FA0]" />
+                <Instagram className="w-4 h-4 text-[#E5488C]" />
                 <span>Seguir no Instagram {settings.studioInstagram}</span>
               </a>
 
@@ -117,14 +117,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
                 onClick={onOpenBooking}
                 className="w-full neon-button py-3 px-4 rounded-xl text-white text-sm font-medium flex items-center justify-center gap-2 transition-transform"
               >
-                <Calendar className="w-4 h-4 text-[#FF8AD8]" />
+                <Calendar className="w-4 h-4 text-[#EB7AAC]" />
                 <span>Agendar Horário Online</span>
               </button>
             </div>
           </div>
 
           {/* Map Preview Card */}
-          <div className="lg:col-span-7 bg-[#1A0A12] rounded-3xl border border-stone-800 overflow-hidden shadow-2xl relative">
+          <div className="lg:col-span-7 bg-[#27212B] rounded-3xl border border-stone-800 overflow-hidden shadow-2xl relative">
             <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-stone-900">
               {/* Stylized Google Map iframe representation for Zona Norte Santana SP */}
               <iframe
@@ -139,9 +139,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
               />
 
               {/* Floating Pin Card */}
-              <div className="absolute top-4 left-4 bg-[#0D0509]/90 backdrop-blur-md border border-[#FF2FA0]/40 p-3 rounded-xl shadow-lg max-w-xs">
+              <div className="absolute top-4 left-4 bg-[#1A171E]/90 backdrop-blur-md border border-[#E5488C]/40 p-3 rounded-xl shadow-lg max-w-xs">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FF2FA0] animate-ping" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#E5488C] animate-ping" />
                   <span className="font-display text-xs text-white font-medium">Gab Studio</span>
                 </div>
                 <p className="text-[11px] text-stone-300 font-light">
@@ -156,9 +156,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0D0509]/90 border border-stone-700 text-xs text-white hover:border-[#FF2FA0] shadow-md transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1A171E]/90 border border-stone-700 text-xs text-white hover:border-[#E5488C] shadow-md transition-colors"
                 >
-                  <Navigation className="w-3.5 h-3.5 text-[#FF2FA0]" />
+                  <Navigation className="w-3.5 h-3.5 text-[#E5488C]" />
                   <span>Traçar Rota no Google Maps</span>
                 </a>
               </div>

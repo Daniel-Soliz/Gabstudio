@@ -10,7 +10,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOpenLookup }) => {
   return (
-    <footer className="relative bg-[#080205] border-t border-stone-900 pt-16 pb-12 text-stone-400">
+    <footer className="relative bg-[#17151C] border-t border-stone-900 pt-16 pb-12 text-stone-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-stone-900">
@@ -18,12 +18,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
-              <LashIcon className="w-6 h-6 text-[#FF8AD8]" />
+              <LashIcon className="w-6 h-6 text-[#EB7AAC]" />
               <span className="font-script text-3xl text-white tracking-wide">
                 Gab Studio
               </span>
             </div>
-            <p className="font-serif-luxury text-xs uppercase tracking-[0.2em] text-[#E6C280]">
+            <p className="font-serif-luxury text-xs uppercase tracking-[0.2em] text-[#D977A3]">
               Especialista em Cílios por Gab Santos
             </p>
             <p className="text-xs text-stone-400 font-light leading-relaxed max-w-sm">
@@ -34,10 +34,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
                 href="https://instagram.com/gabstudio.lash"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-stone-900 border border-stone-800 hover:border-[#FF2FA0] text-stone-300 hover:text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-stone-900 border border-stone-800 hover:border-[#E5488C] text-stone-300 hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Instagram da Gab"
               >
-                <Instagram className="w-4 h-4 text-[#FF2FA0]" />
+                <Instagram className="w-4 h-4 text-[#E5488C]" />
               </a>
               <a
                 href="https://wa.me/5511969530621"
@@ -58,25 +58,25 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
             </h4>
             <ul className="space-y-2 text-xs font-light">
               <li>
-                <a href="#/" className="hover:text-[#FF8AD8] transition-colors">Início</a>
+                <a href="#/" className="hover:text-[#EB7AAC] transition-colors">Início</a>
               </li>
               <li>
-                <a href="#/sobre" className="hover:text-[#FF8AD8] transition-colors">Sobre a Gab</a>
+                <a href="#/sobre" className="hover:text-[#EB7AAC] transition-colors">Sobre a Gab</a>
               </li>
               <li>
-                <a href="#/servicos" className="hover:text-[#FF8AD8] transition-colors">Procedimentos & Valores</a>
+                <a href="#/servicos" className="hover:text-[#EB7AAC] transition-colors">Procedimentos & Valores</a>
               </li>
               <li>
-                <a href="#/galeria" className="hover:text-[#FF8AD8] transition-colors">Galeria de Resultados</a>
+                <a href="#/galeria" className="hover:text-[#EB7AAC] transition-colors">Galeria de Resultados</a>
               </li>
               <li>
-                <a href="#/depoimentos" className="hover:text-[#FF8AD8] transition-colors">Depoimentos</a>
+                <a href="#/depoimentos" className="hover:text-[#EB7AAC] transition-colors">Depoimentos</a>
               </li>
               <li>
-                <a href="#/faq" className="hover:text-[#FF8AD8] transition-colors">Dúvidas Frequentes</a>
+                <a href="#/faq" className="hover:text-[#EB7AAC] transition-colors">Dúvidas Frequentes</a>
               </li>
               <li>
-                <a href="#/contato" className="hover:text-[#FF8AD8] transition-colors">Localização</a>
+                <a href="#/contato" className="hover:text-[#EB7AAC] transition-colors">Localização</a>
               </li>
             </ul>
           </div>
@@ -89,18 +89,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
             <div className="space-y-2.5">
               <button
                 onClick={onOpenBooking}
-                className="w-full text-left px-3.5 py-2.5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-[#FF2FA0]/50 text-xs text-white flex items-center justify-between transition-colors"
+                className="w-full text-left px-3.5 py-2.5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-[#E5488C]/50 text-xs text-white flex items-center justify-between transition-colors"
               >
                 <span>Agendar Horário Online</span>
-                <span className="text-[#FF8AD8] font-medium">Abrir</span>
+                <span className="text-[#EB7AAC] font-medium">Abrir</span>
               </button>
 
               <button
                 onClick={onOpenLookup}
-                className="w-full text-left px-3.5 py-2.5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-[#FF2FA0]/50 text-xs text-stone-300 hover:text-white flex items-center justify-between transition-colors"
+                className="w-full text-left px-3.5 py-2.5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-[#E5488C]/50 text-xs text-stone-300 hover:text-white flex items-center justify-between transition-colors"
               >
                 <div className="flex items-center gap-2">
-                  <Search className="w-3.5 h-3.5 text-[#FF2FA0]" />
+                  <Search className="w-3.5 h-3.5 text-[#E5488C]" />
                   <span>Consultar / Cancelar Agendamento</span>
                 </div>
                 <span className="text-stone-400">Ver</span>
@@ -108,10 +108,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
 
               <button
                 onClick={onOpenAdmin}
-                className="w-full text-left px-3.5 py-2.5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-[#FF2FA0]/50 text-xs text-stone-300 hover:text-white flex items-center justify-between transition-colors"
+                className="w-full text-left px-3.5 py-2.5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-[#E5488C]/50 text-xs text-stone-300 hover:text-white flex items-center justify-between transition-colors"
               >
                 <div className="flex items-center gap-2">
-                  <Shield className="w-3.5 h-3.5 text-[#FF2FA0]" />
+                  <Shield className="w-3.5 h-3.5 text-[#E5488C]" />
                   <span>Acesso Restrito da Gab (Painel Admin)</span>
                 </div>
                 <span className="text-stone-400">Entrar</span>
@@ -126,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin, onOp
           <p>© {new Date().getFullYear()} Gab Studio. Todos os direitos reservados. Zona Norte, São Paulo/SP.</p>
           <div className="flex items-center gap-1">
             <span>Desenvolvido com carinho</span>
-            <Heart className="w-3 h-3 text-[#FF2FA0] fill-[#FF2FA0]" />
+            <Heart className="w-3 h-3 text-[#E5488C] fill-[#E5488C]" />
             <span>para Gab Santos</span>
           </div>
         </div>

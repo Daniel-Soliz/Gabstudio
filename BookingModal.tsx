@@ -214,7 +214,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#FF2FA0', '#FF8AD8', '#E6C280', '#FFFFFF'],
+          colors: ['#E5488C', '#EB7AAC', '#D977A3', '#FFFFFF'],
         });
       } catch {
         // Safe fallback
@@ -268,15 +268,15 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
       <div 
-        className="relative w-full max-w-2xl bg-[#140810] border border-[#FF2FA0]/40 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
+        className="relative w-full max-w-2xl bg-[#231D27] border border-[#E5488C]/40 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Modal Header */}
-        <div className="px-6 py-4 bg-[#1A0A12] border-b border-stone-800 flex items-center justify-between">
+        <div className="px-6 py-4 bg-[#27212B] border-b border-stone-800 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <LashIcon className="w-5 h-5 text-[#FF8AD8]" />
+            <LashIcon className="w-5 h-5 text-[#EB7AAC]" />
             <h3 className="font-display text-lg sm:text-xl text-white font-medium">
-              Agendamento Online · <span className="font-script text-xl text-[#FF8AD8]">Gab Studio</span>
+              Agendamento Online · <span className="font-script text-xl text-[#EB7AAC]">Gab Studio</span>
             </h3>
           </div>
           <button
@@ -290,30 +290,30 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
         {/* Step Progress Indicator (if not on success screen) */}
         {step < 5 && (
-          <div className="px-6 py-3 bg-[#0D0509] border-b border-stone-900 flex items-center justify-between text-xs">
+          <div className="px-6 py-3 bg-[#1A171E] border-b border-stone-900 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2">
-              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 1 ? 'bg-[#FF2FA0] text-white' : 'bg-stone-800 text-stone-400'}`}>
+              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 1 ? 'bg-[#E5488C] text-white' : 'bg-stone-800 text-stone-400'}`}>
                 1
               </span>
               <span className={`hidden sm:inline ${step >= 1 ? 'text-white' : 'text-stone-500'}`}>Serviço</span>
             </div>
             <div className="h-0.5 w-6 bg-stone-800" />
             <div className="flex items-center gap-2">
-              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 2 ? 'bg-[#FF2FA0] text-white' : 'bg-stone-800 text-stone-400'}`}>
+              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 2 ? 'bg-[#E5488C] text-white' : 'bg-stone-800 text-stone-400'}`}>
                 2
               </span>
               <span className={`hidden sm:inline ${step >= 2 ? 'text-white' : 'text-stone-500'}`}>Data & Hora</span>
             </div>
             <div className="h-0.5 w-6 bg-stone-800" />
             <div className="flex items-center gap-2">
-              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 3 ? 'bg-[#FF2FA0] text-white' : 'bg-stone-800 text-stone-400'}`}>
+              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 3 ? 'bg-[#E5488C] text-white' : 'bg-stone-800 text-stone-400'}`}>
                 3
               </span>
               <span className={`hidden sm:inline ${step >= 3 ? 'text-white' : 'text-stone-500'}`}>Seus Dados</span>
             </div>
             <div className="h-0.5 w-6 bg-stone-800" />
             <div className="flex items-center gap-2">
-              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 4 ? 'bg-[#FF2FA0] text-white' : 'bg-stone-800 text-stone-400'}`}>
+              <span className={`w-6 h-6 rounded-full flex items-center justify-center font-medium ${step >= 4 ? 'bg-[#E5488C] text-white' : 'bg-stone-800 text-stone-400'}`}>
                 4
               </span>
               <span className={`hidden sm:inline ${step >= 4 ? 'text-white' : 'text-stone-500'}`}>Sinal & Pagamento</span>
@@ -341,15 +341,15 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <div
                     key={service.id}
                     onClick={() => handleSelectService(service)}
-                    className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800 hover:border-[#FF2FA0] cursor-pointer transition-all hover:bg-[#200D17] flex items-center justify-between gap-4 group"
+                    className="p-4 rounded-2xl bg-[#27212B] border border-stone-800 hover:border-[#E5488C] cursor-pointer transition-all hover:bg-[#332935] flex items-center justify-between gap-4 group"
                   >
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <h5 className="font-display text-white text-base font-medium group-hover:text-[#FF8AD8] transition-colors">
+                        <h5 className="font-display text-white text-base font-medium group-hover:text-[#EB7AAC] transition-colors">
                           {service.name}
                         </h5>
                         {service.badge && (
-                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#FF2FA0]/20 text-[#FF8AD8] border border-[#FF2FA0]/30 font-medium">
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#E5488C]/20 text-[#EB7AAC] border border-[#E5488C]/30 font-medium">
                             {service.badge}
                           </span>
                         )}
@@ -358,8 +358,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                         {service.description}
                       </p>
                       <div className="flex items-center gap-4 mt-2 text-xs text-stone-400">
-                        <span className="flex items-center gap-1 text-[#E6C280]">
-                          <Clock className="w-3.5 h-3.5 text-[#FF2FA0]" />
+                        <span className="flex items-center gap-1 text-[#D977A3]">
+                          <Clock className="w-3.5 h-3.5 text-[#E5488C]" />
                           <span>{service.durationMinutes} min</span>
                         </span>
                       </div>
@@ -369,7 +369,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       <span className="font-display text-lg text-white font-semibold tabular-nums block">
                         R$ {service.price.toFixed(2).replace('.', ',')}
                       </span>
-                      <span className="text-[11px] text-[#FF8AD8] group-hover:underline inline-flex items-center gap-1 mt-1">
+                      <span className="text-[11px] text-[#EB7AAC] group-hover:underline inline-flex items-center gap-1 mt-1">
                         <span>Escolher</span>
                         <ChevronRight className="w-3.5 h-3.5" />
                       </span>
@@ -384,13 +384,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           {step === 2 && selectedService && (
             <div className="space-y-6">
               {/* Selected service pill */}
-              <div className="p-3.5 rounded-xl bg-[#1A0A12] border border-stone-800 flex items-center justify-between">
+              <div className="p-3.5 rounded-xl bg-[#27212B] border border-stone-800 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-stone-400 block">Procedimento Escolhido</span>
                   <span className="font-display text-white text-sm font-medium">{selectedService.name}</span>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-[#E6C280] block font-light">{selectedService.durationMinutes} min</span>
+                  <span className="text-xs text-[#D977A3] block font-light">{selectedService.durationMinutes} min</span>
                   <span className="text-sm font-semibold text-white">R$ {selectedService.price.toFixed(2).replace('.', ',')}</span>
                 </div>
               </div>
@@ -406,7 +406,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     min={new Date().toISOString().split('T')[0]}
                     value={selectedDate}
                     onChange={(e) => setSelectedDate(e.target.value)}
-                    className="w-full bg-[#1A0A12] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors"
+                    className="w-full bg-[#27212B] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors"
                   />
                   <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
                 </div>
@@ -452,8 +452,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                         onClick={() => setSelectedTime(slot.time)}
                         className={`py-2.5 px-3 rounded-xl text-xs font-medium tabular-nums transition-all border ${
                           selectedTime === slot.time
-                            ? 'bg-[#FF2FA0] text-white border-[#FF2FA0] shadow-md shadow-[#FF2FA0]/30 font-semibold'
-                            : 'bg-[#1A0A12] text-stone-300 border-stone-800 hover:border-[#FF2FA0]/50 hover:text-white'
+                            ? 'bg-[#E5488C] text-white border-[#E5488C] shadow-md shadow-[#E5488C]/30 font-semibold'
+                            : 'bg-[#27212B] text-stone-300 border-stone-800 hover:border-[#E5488C]/50 hover:text-white'
                         }`}
                       >
                         {slot.time}
@@ -487,7 +487,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   className="neon-button px-6 py-2.5 rounded-full text-white text-xs sm:text-sm font-medium flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>Continuar</span>
-                  <ChevronRight className="w-4 h-4 text-[#FF8AD8]" />
+                  <ChevronRight className="w-4 h-4 text-[#EB7AAC]" />
                 </button>
               </div>
             </div>
@@ -515,7 +515,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="Ex: Mariana Albuquerque"
                   value={clientName}
                   onChange={(e) => setClientName(e.target.value)}
-                  className="w-full bg-[#1A0A12] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors"
+                  className="w-full bg-[#27212B] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors"
                 />
                 {errors.name && <p className="text-xs text-rose-400">{errors.name}</p>}
               </div>
@@ -530,7 +530,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="(11) 99999-9999"
                   value={clientPhone}
                   onChange={(e) => handlePhoneChange(e.target.value)}
-                  className="w-full bg-[#1A0A12] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors"
+                  className="w-full bg-[#27212B] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors"
                 />
                 {errors.phone && <p className="text-xs text-rose-400">{errors.phone}</p>}
               </div>
@@ -545,7 +545,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="Ex: Nenhuma / Olhos ressecam com facilidade"
                   value={allergies}
                   onChange={(e) => setAllergies(e.target.value)}
-                  className="w-full bg-[#1A0A12] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none transition-colors"
+                  className="w-full bg-[#27212B] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none transition-colors"
                 />
               </div>
 
@@ -558,7 +558,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="Ex: Gosto de efeito mais volumoso / curvatura D / primeira vez fazendo extensão"
                   value={clientNotes}
                   onChange={(e) => setClientNotes(e.target.value)}
-                  className="w-full bg-[#1A0A12] border border-stone-800 focus:border-[#FF2FA0] rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none transition-colors resize-none"
+                  className="w-full bg-[#27212B] border border-stone-800 focus:border-[#E5488C] rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none transition-colors resize-none"
                 />
               </div>
 
@@ -579,7 +579,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   className="neon-button px-6 py-2.5 rounded-full text-white text-xs sm:text-sm font-medium flex items-center gap-2"
                 >
                   <span>Ir para o Pagamento</span>
-                  <ChevronRight className="w-4 h-4 text-[#FF8AD8]" />
+                  <ChevronRight className="w-4 h-4 text-[#EB7AAC]" />
                 </button>
               </div>
             </div>
@@ -598,7 +598,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               {/* Booking Summary Box */}
-              <div className="p-4 rounded-2xl bg-[#1A0A12] border border-stone-800 space-y-3">
+              <div className="p-4 rounded-2xl bg-[#27212B] border border-stone-800 space-y-3">
                 <div className="flex justify-between items-center text-xs text-stone-300">
                   <span className="text-stone-400">Procedimento:</span>
                   <span className="font-medium text-white">{selectedService.name}</span>
@@ -633,7 +633,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   type="button"
                   onClick={() => setPayFullAmount(!payFullAmount)}
                   className={`w-12 h-6 rounded-full transition-colors relative ${
-                    payFullAmount ? 'bg-[#FF2FA0]' : 'bg-stone-700'
+                    payFullAmount ? 'bg-[#E5488C]' : 'bg-stone-700'
                   }`}
                 >
                   <span
@@ -645,9 +645,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               {/* Amount to pay now highlight */}
-              <div className="p-4 rounded-xl bg-[#1A0A12] border border-[#FF2FA0]/40 flex items-center justify-between">
+              <div className="p-4 rounded-xl bg-[#27212B] border border-[#E5488C]/40 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] uppercase tracking-wider text-[#FF8AD8] block font-semibold">
+                  <span className="text-[10px] uppercase tracking-wider text-[#EB7AAC] block font-semibold">
                     {payFullAmount ? 'Valor Total a Pagar Agora' : `Sinal de ${depositPercent}% a Pagar Agora`}
                   </span>
                   <span className="text-[11px] text-stone-400">
@@ -670,11 +670,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     onClick={() => setPaymentMethod('pix')}
                     className={`p-3.5 rounded-xl border flex items-center justify-center gap-2.5 transition-all text-xs font-medium ${
                       paymentMethod === 'pix'
-                        ? 'bg-[#FF2FA0]/15 border-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
-                        : 'bg-[#1A0A12] border-stone-800 text-stone-400 hover:text-white'
+                        ? 'bg-[#E5488C]/15 border-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
+                        : 'bg-[#27212B] border-stone-800 text-stone-400 hover:text-white'
                     }`}
                   >
-                    <QrCode className="w-4 h-4 text-[#FF2FA0]" />
+                    <QrCode className="w-4 h-4 text-[#E5488C]" />
                     <span>Pix Instantâneo</span>
                   </button>
 
@@ -683,11 +683,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     onClick={() => setPaymentMethod('cartao_credito')}
                     className={`p-3.5 rounded-xl border flex items-center justify-center gap-2.5 transition-all text-xs font-medium ${
                       paymentMethod === 'cartao_credito'
-                        ? 'bg-[#FF2FA0]/15 border-[#FF2FA0] text-white shadow-md shadow-[#FF2FA0]/20'
-                        : 'bg-[#1A0A12] border-stone-800 text-stone-400 hover:text-white'
+                        ? 'bg-[#E5488C]/15 border-[#E5488C] text-white shadow-md shadow-[#E5488C]/20'
+                        : 'bg-[#27212B] border-stone-800 text-stone-400 hover:text-white'
                     }`}
                   >
-                    <CreditCard className="w-4 h-4 text-[#FF2FA0]" />
+                    <CreditCard className="w-4 h-4 text-[#E5488C]" />
                     <span>Cartão de Crédito</span>
                   </button>
                 </div>
@@ -695,10 +695,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               {/* Pix Display Area */}
               {paymentMethod === 'pix' && pixData && (
-                <div className="p-5 rounded-2xl bg-[#0D0509] border border-stone-800 space-y-4 text-center">
+                <div className="p-5 rounded-2xl bg-[#1A171E] border border-stone-800 space-y-4 text-center">
                   <div className="flex items-center justify-between text-xs text-stone-400">
                     <span className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5 text-[#FF2FA0]" />
+                      <Clock className="w-3.5 h-3.5 text-[#E5488C]" />
                       <span>Expira em: <strong className="text-white tabular-nums">{formatTimer(pixTimeRemaining)}</strong></span>
                     </span>
                     <span className="text-[11px] text-stone-400">Liberação automática após 15 min</span>
@@ -720,12 +720,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                         type="text"
                         readOnly
                         value={pixData.pixCopiaECola}
-                        className="flex-1 bg-[#1A0A12] border border-stone-800 rounded-lg px-3 py-2 text-[11px] font-mono text-stone-300 focus:outline-none truncate"
+                        className="flex-1 bg-[#27212B] border border-stone-800 rounded-lg px-3 py-2 text-[11px] font-mono text-stone-300 focus:outline-none truncate"
                       />
                       <button
                         type="button"
                         onClick={handleCopyPix}
-                        className="px-3 py-2 rounded-lg bg-[#FF2FA0] hover:bg-[#FF8AD8] text-white text-xs font-medium flex items-center gap-1.5 shrink-0 transition-colors"
+                        className="px-3 py-2 rounded-lg bg-[#E5488C] hover:bg-[#EB7AAC] text-white text-xs font-medium flex items-center gap-1.5 shrink-0 transition-colors"
                       >
                         {copiedPix ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                         <span>{copiedPix ? 'Copiado!' : 'Copiar'}</span>
@@ -741,7 +741,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               {/* Credit Card Simulation */}
               {paymentMethod === 'cartao_credito' && (
-                <div className="p-4 rounded-2xl bg-[#0D0509] border border-stone-800 text-xs text-stone-300 space-y-2">
+                <div className="p-4 rounded-2xl bg-[#1A171E] border border-stone-800 text-xs text-stone-300 space-y-2">
                   <div className="flex items-center gap-2 text-white font-medium">
                     <ShieldCheck className="w-4 h-4 text-[#25D366]" />
                     <span>Checkout Seguro Mercado Pago</span>
@@ -767,9 +767,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   type="button"
                   disabled={isProcessingPayment}
                   onClick={() => handleCompleteBooking(true)}
-                  className="neon-button px-6 py-3 rounded-full text-white text-xs sm:text-sm font-medium flex items-center gap-2 shadow-lg shadow-[#FF2FA0]/20 disabled:opacity-60"
+                  className="neon-button px-6 py-3 rounded-full text-white text-xs sm:text-sm font-medium flex items-center gap-2 shadow-lg shadow-[#E5488C]/20 disabled:opacity-60"
                 >
-                  <CheckCircle2 className="w-4 h-4 text-[#FF8AD8]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#EB7AAC]" />
                   <span>
                     {isProcessingPayment 
                       ? 'Confirmando reserva...' 
@@ -789,7 +789,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#FF8AD8] font-medium block">
+                <span className="text-xs uppercase tracking-widest text-[#EB7AAC] font-medium block">
                   Reserva Confirmada com Sucesso!
                 </span>
                 <h4 className="font-display text-2xl sm:text-3xl text-white font-normal mt-1">
@@ -801,11 +801,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               {/* Voucher Ticket Card */}
-              <div className="bg-[#1A0A12] rounded-3xl border border-[#FF2FA0]/40 p-5 text-left space-y-3 shadow-xl">
+              <div className="bg-[#27212B] rounded-3xl border border-[#E5488C]/40 p-5 text-left space-y-3 shadow-xl">
                 <div className="flex justify-between items-center pb-3 border-b border-stone-800">
                   <div>
                     <span className="text-[10px] uppercase text-stone-400 block">Código da Reserva</span>
-                    <span className="font-mono text-base text-[#FF8AD8] font-bold">
+                    <span className="font-mono text-base text-[#EB7AAC] font-bold">
                       {confirmedAppointment.id}
                     </span>
                   </div>
@@ -829,7 +829,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   </div>
                   <div>
                     <span className="text-stone-400 block">Sinal Pago:</span>
-                    <strong className="text-[#FF8AD8] font-medium">
+                    <strong className="text-[#EB7AAC] font-medium">
                       R$ {confirmedAppointment.depositAmount.toFixed(2).replace('.', ',')}
                     </strong>
                   </div>
@@ -884,7 +884,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 rounded-full bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-200 hover:text-white text-xs sm:text-sm font-light flex items-center justify-center gap-2 transition-colors"
                 >
-                  <Calendar className="w-4 h-4 text-[#FF2FA0]" />
+                  <Calendar className="w-4 h-4 text-[#E5488C]" />
                   <span>Adicionar ao Google Agenda</span>
                   <ExternalLink className="w-3.5 h-3.5 text-stone-400" />
                 </a>
@@ -895,14 +895,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   onClick={handleDownloadIcs}
                   className="w-full py-2.5 px-4 rounded-full bg-stone-900/60 hover:bg-stone-800 border border-stone-800 text-stone-300 text-xs flex items-center justify-center gap-2 transition-colors"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#FF8AD8]" />
+                  <Download className="w-3.5 h-3.5 text-[#EB7AAC]" />
                   <span>Baixar Arquivo para Calendário Apple / Outlook (.ics)</span>
                 </button>
               </div>
 
               {/* Cancellation policy note */}
               <div className="p-3 rounded-xl bg-stone-900/50 border border-stone-800 text-[11px] text-stone-400 text-left">
-                <Info className="w-3.5 h-3.5 text-[#FF2FA0] inline mr-1" />
+                <Info className="w-3.5 h-3.5 text-[#E5488C] inline mr-1" />
                 <span>
                   <strong>Política de Cancelamento:</strong> Cancelamentos ou reagendamentos podem ser realizados até {settings.cancellationHoursLimit} horas antes do horário pelo site com seu código <strong>{confirmedAppointment.id}</strong> ou diretamente com a Gab.
                 </span>
