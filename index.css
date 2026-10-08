@@ -1790,3 +1790,36 @@ footer {
   input, select, textarea { max-width: 100%; font-size: 16px; }
   button, a { touch-action: manipulation; }
 }
+
+/* Booking-first presentation: navigation remains in the code for future expansion. */
+.gs-header-inner { grid-template-columns: minmax(0, 1fr) auto; }
+.gs-desktop-nav, .gs-mobile-toggle { display: none !important; }
+.gs-home-actions { grid-template-rows: auto minmax(0, 1fr); }
+.gs-booking-guide {
+  min-width: 0; border: 1px solid var(--gs-border); border-radius: 25px;
+  background: linear-gradient(145deg, #fffaf5, #f0e3d4);
+  padding: clamp(26px, 4vw, 48px); display: flex; flex-direction: column;
+  justify-content: center; box-shadow: 0 12px 35px rgba(59,41,35,.05);
+}
+.gs-guide-eyebrow { color: #9d6749; font-weight: 700; letter-spacing: .19em; font-size: .72rem; margin: 0 0 14px; }
+.gs-booking-guide h2 { font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: .99; color: var(--gs-espresso); font-weight: 500; margin: 0 0 18px; }
+.gs-booking-guide > p:not(.gs-guide-eyebrow) { font-size: clamp(.95rem, 1.4vw, 1.06rem); line-height: 1.7; color: var(--gs-muted); max-width: 490px; margin: 0 0 25px; }
+.gs-guide-steps { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.gs-guide-steps span { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 11px 13px; border: 1px solid #dfc9b2; background: #fffaf5; color: var(--gs-espresso); font-size: .78rem; font-weight: 600; }
+.gs-guide-steps strong { color: var(--gs-terracotta); font-weight: 800; }
+.gs-guide-button { display: inline-flex; gap: 13px; align-items: center; justify-content: center; width: fit-content; min-height: 52px; border: none; border-radius: 999px; padding: 0 24px; background: var(--gs-terracotta); color: #fffaf5; font-weight: 700; cursor: pointer; transition: background .2s,transform .2s; }
+.gs-guide-button:hover { background: var(--gs-espresso); transform: translateY(-2px); }
+@media (max-width: 1100px) {
+  .gs-header-inner { grid-template-columns: minmax(0,1fr) auto; }
+  .gs-mobile-toggle, .gs-desktop-nav { display: none !important; }
+  .gs-home-actions { grid-template-rows: auto auto; }
+  .gs-booking-guide { min-height: 290px; }
+}
+@media (max-width: 760px) {
+  .gs-header-inner { grid-template-columns: minmax(0,1fr) auto; }
+  .gs-booking-guide { border-radius: 20px; padding: 26px 22px; min-height: 0; }
+  .gs-booking-guide h2 { font-size: clamp(2.5rem, 10vw, 3.25rem); }
+  .gs-guide-steps { gap: 7px; }
+  .gs-guide-steps span { font-size: .72rem; padding: 9px 11px; }
+  .gs-guide-button { width: 100%; }
+}
